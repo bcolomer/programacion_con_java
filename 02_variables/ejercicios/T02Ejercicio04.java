@@ -16,6 +16,5 @@ public class T02Ejercicio04 {
 
     System.out.println("por " + euros + "€ recibiras " + resultado + " pesetas");
     System.out.printf("%.2f € --> %d pesetas", euros, resultado);
-    // System.out.println(esto es una prueba);
   }
 }
