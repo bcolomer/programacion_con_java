@@ -19,6 +19,6 @@ public class T02Ejercicio05 {
 
     String resultadob = String.format("%.2f", resultado);
     System.out.println("por " + pesetas + " pesetas recibirás " + resultadob + "€");
-    // System.out.printf("%d pesetas --> %.2f ");
+    System.out.printf("%d pesetas --> %.2f", pesetas, resultado);
   }
 }
