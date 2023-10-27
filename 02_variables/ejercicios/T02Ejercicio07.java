@@ -14,6 +14,7 @@ public class T02Ejercicio07 {
     // pueden asignar con comillas simples
     char variable2 = 'b';
     String variable3 = " Esto es una cadena con comillas dobles";
+    char variable4 = 'c';
 
     System.out.println(variable2);
     System.out.println(variable3);
@@ -26,5 +27,9 @@ public class T02Ejercicio07 {
     System.out.println("esto es otra prueba:");
     System.out.println("mostrando por pantalla una variable tipo char: " + variable2
         + " y una variable tipo String en la misma linea:" + variable3);
+    // esto sumara los codigos ascii de las variables tipo char y luego concatenara
+    // el string, para que imprima los caracteres hay que agregar comillas
+    System.out.println(variable2 + variable4 + variable3);
+    System.out.println("" + variable2 + variable4 + variable3);
   }
 }

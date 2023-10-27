@@ -24,7 +24,9 @@ public class T02Ejercicio08 {
      * int palabra = variable1 + variable2 + variable3 + variable4 + variable5;
      */
     String palabra = variable1 + "" + variable2 + "" + variable3 + "" + variable4 + "" + variable5;
+    String palabra2 = "" + variable1 + variable2 + variable3 + variable4 + variable5;
     System.out.println(palabra);
+    System.out.println(palabra2);
 
   }
 }
