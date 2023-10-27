@@ -17,5 +17,13 @@ public class T02Ejercicio06 {
 
     System.out.printf("La base imponible correspondiente al "
         + porcentajeIva + "%% es de %.2f€\n", eurosIva);
+
+    /*
+     * Solucion profesor: para numeros de 8 cifras contando la coma, para reservar
+     * espacio
+     * double baseImponible = 22.75;
+     * System.out.printf("Base imponible %8.2f\n", base imponible);
+     * System.out.printf("total %8.2f\n", baseimponible + (baseimponible*0.21);
+     */
   }
 }
