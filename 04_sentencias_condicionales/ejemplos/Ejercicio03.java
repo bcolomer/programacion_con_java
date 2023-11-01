@@ -34,6 +34,9 @@ public class Ejercicio03 {
         b = s.nextDouble();
         System.out.println("El area del triangulo es " + ((b * h) / 2) + " cm2.");
         break;
+      default:
+        System.out.println("La opcion elegida no es correcta");
+        break;
     }
     s.close();
   }
