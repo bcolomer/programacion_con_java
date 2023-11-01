@@ -28,6 +28,5 @@ public class T04Ejercicio09 {
       double x2 = (-b - (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
       System.out.printf("Los valores de x para los datos introducidos es %.2f  y %.2f", x1, x2);
     }
-
   }
 }
