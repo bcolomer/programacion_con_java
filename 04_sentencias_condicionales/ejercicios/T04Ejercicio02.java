@@ -22,7 +22,8 @@ public class T04Ejercicio02 {
     } else if ((hora >= 13) && (hora <= 21)) {
       System.out.println("Buenas tardes");
 
-    } else
+    } else if (((hora >= 22) && (hora <= 24)) || (hora < 6)) {
       System.out.println("Buenas noches");
+    }
   }
 }
