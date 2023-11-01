@@ -17,14 +17,13 @@ public class Ejercicio01 {
     if (edad < 18) {
       System.out.println("Eres menor de edad");
 
+    } else if (edad >= 65) {
+      System.out.println("Estas en edad de jubilarte");
+
     } else {
-      if (edad > 65) {
-        System.out.println("Estas en edad de jubilarte");
-
-      } else {
-        System.out.println("Eres mayor de edad");
-      }
-
+      System.out.println("Eres mayor de edad");
     }
+
   }
+
 }
