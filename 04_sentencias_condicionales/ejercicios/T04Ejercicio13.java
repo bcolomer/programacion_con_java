@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejericio13 {
+public class T04Ejercicio13 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduzca 3 numeros separados por espacio para ordenarlos de menor a mayor");
