@@ -109,15 +109,15 @@ public class T04Ejercicio12 {
       nota = nota - 0.33;
     }
     s.close();
-    System.out.println("La nota de este examen es " + nota);
+    System.out.printf("La nota de este examen es %.2f ", nota);
     if (nota >= 9) {
       System.out.println("Un SOBRESALIENTE. Enhorabuena, vas por buen camino.");
     } else if (nota >= 5) {
       System.out.println("Has aprobado pero aun puedes esforzarte un poco");
     } else if ((nota < 5) && (nota > 1)) {
       System.out.println("has suspendido");
-    } else if (nota < 0) {
-      System.out.println("debes prestar mas atencion en clase y estudiar!");
+    } else {
+      System.out.println("Nota negativa, debes prestar mas atencion en clase y estudiar!");
     }
   }
 }
