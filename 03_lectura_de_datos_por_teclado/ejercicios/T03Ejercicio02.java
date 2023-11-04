@@ -15,10 +15,9 @@ public class T03Ejercicio02 {
     double conversor = 166.386;
     System.out.println("Introduzca la cantidad de euros que desea convertir a pesetas: ");
     double eurosConvertir = s.nextDouble();
-    double pesetas = eurosConvertir * conversor;
+    double pesetas = (int) (eurosConvertir * conversor);
 
     System.out.printf("Por " + eurosConvertir + "€ obtendrás %.0f pesetas", pesetas);
-
     s.close();
   }
 }

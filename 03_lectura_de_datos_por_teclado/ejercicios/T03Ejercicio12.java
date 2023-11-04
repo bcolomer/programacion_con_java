@@ -31,6 +31,7 @@ public class T03Ejercicio12 {
     double nota2Adaptada = notaFinal - nota1Adaptada;
     double nota2 = (nota2Adaptada * 10) / 6;
     System.out.printf("Para tener %.2f como nota final, en el 2do examen debes tener %.2f.", notaFinal, nota2);
+
   }
 
 }
