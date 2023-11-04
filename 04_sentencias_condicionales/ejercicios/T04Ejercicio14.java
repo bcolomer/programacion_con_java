@@ -18,6 +18,8 @@ public class T04Ejercicio14 {
       System.out.println("El número introducido es par");
     } else if ((numero % 5) == 0) {
       System.out.println("El número introducido es divisible por 5");
+    } else {
+      System.out.println("El numero introducido no es par ni divisible por 5");
     }
   }
 
