@@ -39,7 +39,6 @@ public class T04Ejercicio11 {
          */ // Esto fue mi primera opcion, pero el switch es innecesario y lo mejoré.
 
         System.out.println("Para medianoche restan " + (segundosHora + segundosMinutos) + " segundos.");
-
       }
     }
   }
