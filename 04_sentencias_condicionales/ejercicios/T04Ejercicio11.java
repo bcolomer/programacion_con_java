@@ -29,11 +29,15 @@ public class T04Ejercicio11 {
         int segundosHora = horasRestantes * 3600;
         int segundosMinutos = minutosRestantes * 60;
 
-        /*switch (hora) {
-          case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23:
-            System.out.println("Para medianoche restan " + (segundosHora + segundosMinutos) + " segundos.");
-            break;*/ // Esto fue mi primera opcion, pero el switch es innecesario y lo mejoré.
-        }
+        /*
+         * switch (hora) {
+         * case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+         * 20, 21, 22, 23:
+         * System.out.println("Para medianoche restan " + (segundosHora +
+         * segundosMinutos) + " segundos.");
+         * break;
+         */ // Esto fue mi primera opcion, pero el switch es innecesario y lo mejoré.
+
         System.out.println("Para medianoche restan " + (segundosHora + segundosMinutos) + " segundos.");
 
       }
