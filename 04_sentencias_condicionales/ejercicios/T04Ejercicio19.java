@@ -12,9 +12,7 @@ public class T04Ejercicio19 {
     Scanner s = new Scanner(System.in);
 
     s.close();
-    int x = 34;
-    int y = 78;
-    System.out.println((float) x / (float) y);
+
   }
 
 }
