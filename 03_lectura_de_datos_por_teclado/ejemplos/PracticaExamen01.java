@@ -4,12 +4,12 @@
  * 
  * @autor Barbara Colomer
  */
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class PracticaExamen01 {
   public static void main(String[] args) {
 
-    Scanner s = new Scanner(System.in);
+    // Scanner s = new Scanner(System.in);
     System.out.println("Introduzca un numero con decimales para redondearlo");
     double num1 = 25.987; // s.nextDouble();
     num1 = Math.round(num1); // esto parsea el double en int y le quita los decimales que tenga a .0
