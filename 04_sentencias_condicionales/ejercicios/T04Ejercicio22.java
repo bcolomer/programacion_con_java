@@ -16,36 +16,41 @@ public class T04Ejercicio22 {
     int minutosAcual;
     Scanner s = new Scanner(System.in);
     System.out.println("¿Cuanto falta para el fin de semana?");
-    System.out.println("Escribe que dia es hoy en minusculas y sin tilde");
+    System.out.println("Escribe que dia es hoy sin tildes");
     semana = System.console().readLine();
     System.out.println("Indique la hora actual y los minutos separados de espacios");
     horaActual = s.nextInt();
     minutosAcual = s.nextInt();
+    int minDelDia = (horaActual * 60) + minutosAcual;
+    int minutosViernes = 900;
+    int minutosPorDia = 1440;
+
     s.close();
     switch (semana) {
-      case "lunes":
-        System.out.println("es lunes");
+      case "lunes", "Lunes", "LUNES":
+        System.out.printf("Para el fin de semana faltan %d minutos",
+            ((minutosPorDia * 4) + minutosViernes - minDelDia));
         break;
-      case "martes":
-
+      case "martes", "Martes", "MARTES":
+        System.out.printf("Para el fin de semana faltan %d minutos",
+            ((minutosPorDia * 3) + minutosViernes - minDelDia));
         break;
-      case "miercoles":
-
+      case "miercoles", "Miercoles", "MIERCOLES":
+        System.out.printf("Para el fin de semana faltan %d minutos",
+            ((minutosPorDia * 2) + minutosViernes - minDelDia));
         break;
-      case "jueves":
-
+      case "jueves", "Jueves", "JUEVES":
+        System.out.printf("Para el fin de semana faltan %d minutos", (minutosPorDia + minutosViernes - minDelDia));
         break;
-      case "viernes":
-
+      case "viernes", "Viernes", "VIERNES":
+        System.out.printf("Para el fin de semana faltan %d minutos", (minutosViernes - minDelDia));
         break;
-      case "sabado", "domingo":
+      case "sabado", "Sabado", "SABADO", "domingo", "Domingo", "DOMINGO":
         System.out.println("Ya es fin de semana! disfruta");
-
         break;
       default:
+        System.out.println("Error: no has introducido el dia correctamente");
         break;
     }
-
   }
-
 }
