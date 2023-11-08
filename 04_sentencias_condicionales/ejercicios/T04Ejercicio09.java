@@ -23,15 +23,16 @@ public class T04Ejercicio09 {
       System.out.println("Introduzca el valor de c");
       double c = s.nextDouble();
       s.close();
-      /*if (condition) {
+      /*
+       * if (condition) {
+       * 
+       * } else {
+       */
 
-      } else {*/
-
-      }
-
-      double x1 = (-b + (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
-      double x2 = (-b - (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
-      System.out.printf("Los valores de x para los datos introducidos es %.2f  y %.2f", x1, x2);
     }
+
+    double x1 = (-b + (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
+    double x2 = (-b - (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
+    System.out.printf("Los valores de x para los datos introducidos es %.2f  y %.2f", x1, x2);
   }
 }
