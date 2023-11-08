@@ -16,16 +16,18 @@ public class T04Ejercicio23 {
   public static void main(String[] args) {
     double precioBase = 0;
     String iva;
-    String ivaTexto;
+    String ivaTexto = "";
+    String promoTexto = "";
     String promo;
     double general = 0.21;
     double reducido = 0.1;
     double superreducido = 0.04;
-    double ivaImporte;
-    double precioFinal;
+    double ivaImporte = 0;
+    double precioFinal = 0;
     double mitad = 0.5;
     int menos5 = -5;
     double porc5 = 0.05;
+    double precioPromo = 0;
 
     Scanner s = new Scanner(System.in);
     System.out.println("Introduzca el la base imponible");
@@ -53,17 +55,38 @@ public class T04Ejercicio23 {
         System.out.println("El tipo seleccionado de iva no es correcto");
         break;
     }
-    switch (promo) {
-      case "mitad", "Mitad", "MITAD":
-        precioFinal = (precioBase + ivaImporte) * mitad;
-        break;
 
+    switch (promo) {
+      case "nopro", "Nopro", "NOPRO":
+        promoTexto = "nopro";
+        precioPromo = 0;
+        break;
+      case "mitad", "Mitad", "MITAD":
+
+        promoTexto = "mitad";
+        precioPromo = (precioBase + ivaImporte) * mitad;
+        break;
+      case "menos5", "Menos5", "MENOS5":
+        promoTexto = "menos5";
+        precioPromo = 5;
+        break;
+      case "5porc", "5Porc", "5PORC":
+
+        promoTexto = "5porc";
+        precioPromo = (precioBase + ivaImporte) * porc5;
+        break;
       default:
+        System.out.println("El codigo introducido no se corresponde con ninguna promoción");
         break;
     }
+    precioFinal = precioBase + ivaImporte - precioPromo;
 
-    System.out.println("------------TICKET------------");
-    System.out.printf("%-20s %10.2f", "Base imponible", precioBase);
+    System.out.println("--------------TICKET--------------");
+    System.out.printf("%-20s %10.2f €.\n", "Base imponible", precioBase);
+    System.out.printf("%-20s %10.2f €.\n", "IVA " + ivaTexto, ivaImporte);
+    System.out.printf("%-20s %10.2f €.\n", "Precio con IVA", (precioBase + ivaImporte));
+    System.out.printf("%-20s %10.2f €.\n", "Cod. promo. " + promoTexto, precioPromo);
+    System.out.printf("%-20s %10.2f €.\n", "TOTAL ", precioFinal);
 
   }
 

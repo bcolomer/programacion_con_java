@@ -23,6 +23,11 @@ public class T04Ejercicio09 {
       System.out.println("Introduzca el valor de c");
       double c = s.nextDouble();
       s.close();
+      if (condition) {
+
+      } else {
+
+      }
 
       double x1 = (-b + (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
       double x2 = (-b - (Math.sqrt(Math.pow(b, 2) - (4 * a * c)))) / (2 * a);
