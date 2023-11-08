@@ -23,9 +23,9 @@ public class T04Ejercicio09 {
       System.out.println("Introduzca el valor de c");
       double c = s.nextDouble();
       s.close();
-      if (condition) {
+      /*if (condition) {
 
-      } else {
+      } else {*/
 
       }
 
