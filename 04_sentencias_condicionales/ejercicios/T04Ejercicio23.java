@@ -84,7 +84,7 @@ public class T04Ejercicio23 {
     System.out.printf("%-20s %10.2f €.\n", "Base imponible", precioBase);
     System.out.printf("%-20s %10.2f €.\n", "IVA " + ivaTexto, ivaImporte);
     System.out.printf("%-20s %10.2f €.\n", "Precio con IVA", (precioBase + ivaImporte));
-    System.out.printf("%-20s %10.2f €.\n", "Cod. promo. " + promoTexto, "-" + precioPromo);
+    System.out.printf("%-20s -%9.2f €.\n", "Cod. promo. " + promoTexto, precioPromo);
     System.out.printf("%-20s %10.2f €.\n", "TOTAL ", precioFinal);
 
   }
