@@ -70,9 +70,12 @@ public class T04Ejercicio26R24 {
     } else {
       if (diaSemana.equals("miercoles")) {
         precio = 5;
+
       } else {
         precio = 8;
       }
+      total = precio * entradas; // hay alguna forma de no tener que repetir la asignacion de variables?
+      // y con el descuento tarjeta pasa igual... tengo que repetir el switch?
       System.out.printf("%-40s %10d\n", "Entradas Individuales:", entradas);
       System.out.printf("%-40s %10.2f €\n", "Precio por entrada individual: ", ((double) precio));
       System.out.printf("%-40s %10.2f €\n", "Total: ", total);
