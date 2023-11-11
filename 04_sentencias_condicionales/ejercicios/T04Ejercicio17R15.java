@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio17 {
+public class T04Ejercicio17R15 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduce un numero y se le informará de cual es la ultima cifra de dicho numero");

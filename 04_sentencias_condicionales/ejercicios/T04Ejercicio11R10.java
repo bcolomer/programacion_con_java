@@ -7,7 +7,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio11 {
+public class T04Ejercicio11R10 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("----¿CUANTO FALTA PARA MEDIANOCHE? ---");

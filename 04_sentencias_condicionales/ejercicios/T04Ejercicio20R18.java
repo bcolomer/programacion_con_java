@@ -7,7 +7,7 @@ teclado es capicúa. Se permiten números de hasta 5 cifras.
  */
 import java.util.Scanner;
 
-public class T04Ejercicio20 {
+public class T04Ejercicio20R18 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduzca un numero entero positivo de hasta 5 cifras para saber si es o no capicua");

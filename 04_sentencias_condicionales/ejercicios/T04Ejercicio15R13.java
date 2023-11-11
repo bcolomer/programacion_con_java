@@ -10,7 +10,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio15 {
+public class T04Ejercicio15R13 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduzca el caracter de relleneno de la piramide");

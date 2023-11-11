@@ -20,7 +20,7 @@ poco más y averigües que es lo que está pasando por su cabeza.
  */
 import java.util.Scanner;
 
-public class T04Ejercicio16 {
+public class T04Ejercicio16R14 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     int counter = 0;

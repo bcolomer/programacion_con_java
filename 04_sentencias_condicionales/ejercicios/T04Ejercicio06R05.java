@@ -7,7 +7,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio06 {
+public class T04Ejercicio06R05 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Ingrese la altura  en metros para saber cuando tiempo tardara en caer un objeto");

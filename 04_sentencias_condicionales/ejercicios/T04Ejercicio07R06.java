@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio07 {
+public class T04Ejercicio07R06 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduce por teclado las notas de los 3 ultimos examenes separadas por espacio");

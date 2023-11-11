@@ -12,7 +12,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio23 {
+public class T04Ejercicio23R21 {
   public static void main(String[] args) {
     double precioBase = 0;
     String iva;

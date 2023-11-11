@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio10 {
+public class T04Ejercicio10R09 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Escriba el numero de su mes de nacimiento ");

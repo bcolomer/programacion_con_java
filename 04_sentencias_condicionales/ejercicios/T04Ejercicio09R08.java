@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio09 {
+public class T04Ejercicio09R08 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("---Calculadora de ecuaciones de 2do Grado---");

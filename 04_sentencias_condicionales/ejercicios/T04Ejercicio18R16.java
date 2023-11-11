@@ -7,7 +7,7 @@ introducido por teclado. Se permiten números de hasta 5 cifras.
  */
 import java.util.Scanner;
 
-public class T04Ejercicio18 {
+public class T04Ejercicio18R16 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduzca un numero entero de hasta 5 cifras");

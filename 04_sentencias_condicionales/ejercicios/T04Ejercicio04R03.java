@@ -10,7 +10,7 @@ la hora.
  */
 import java.util.Scanner;
 
-public class T04Ejercicio04 {
+public class T04Ejercicio04R03 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Escriba la cantidad de horas trabajadas esta semana");

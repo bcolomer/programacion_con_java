@@ -9,7 +9,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio22 {
+public class T04Ejercicio22R20 {
   public static void main(String[] args) {
     String semana;
     int horaActual;

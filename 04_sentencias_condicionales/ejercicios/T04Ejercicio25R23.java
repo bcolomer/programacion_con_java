@@ -10,7 +10,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio25 {
+public class T04Ejercicio25R23 {
   public static void main(String[] args) {
     int alto = 0;
     int ancho = 0;

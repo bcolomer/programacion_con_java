@@ -14,7 +14,7 @@ la nota media anterior.
  */
 import java.util.Scanner;
 
-public class T04Ejercicio21 {
+public class T04Ejercicio21R19 {
   public static void main(String[] args) {
     double nota1;
     double nota2;

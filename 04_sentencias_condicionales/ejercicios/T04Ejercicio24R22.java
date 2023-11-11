@@ -13,7 +13,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio24 {
+public class T04Ejercicio24R22 {
   public static void main(String[] args) {
     int cargo;
     int dias;

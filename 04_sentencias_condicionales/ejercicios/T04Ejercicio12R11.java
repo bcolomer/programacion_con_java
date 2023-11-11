@@ -10,7 +10,7 @@
 
 import java.util.Scanner;
 
-public class T04Ejercicio12 {
+public class T04Ejercicio12R11 {
   public static void main(String[] args) {
     System.out.println("----------------------- HOY, EXAMEN TIPO TEST -----------------------");
     System.out.println("Respuesta correcta 1 pto, respuesta incorrecta -0.33 ptos");

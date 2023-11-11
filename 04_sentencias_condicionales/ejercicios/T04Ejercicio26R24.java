@@ -14,7 +14,7 @@
  */
 import java.util.Scanner;
 
-public class T04Ejercicio26 {
+public class T04Ejercicio26R24 {
   public static void main(String[] args) {
 
     int entradaPareja = 11;
