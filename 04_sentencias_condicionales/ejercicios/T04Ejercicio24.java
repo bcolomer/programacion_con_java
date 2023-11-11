@@ -64,17 +64,22 @@ public class T04Ejercicio24 {
         System.out.println("El codigo indicado no se corresponde con ningun valor correcto");
         break;
     }
-    dietaMensual = dias * dietas;
-    sueldoBruto = sueldoBase + dietaMensual;
-    sueldoNeto = sueldoBruto + (sueldoBruto * irpf / 100);
-    System.out.println("---------------------------------");
-    System.out.printf("|%-20s %10.2f|\n", "Sueldo base", sueldoBase);
-    System.out.printf("|%-20s %10.2f|\n", ("Dietas (" + dias + " viajes)"), dietaMensual);
-    System.out.println("---------------------------------");
-    System.out.printf("|%-20s %10.2f|\n", "Sueldo bruto", sueldoBruto);
-    System.out.printf("|%-20s %10.2f|\n", ("Retencion IRPF " + irpf + "%"), (sueldoBruto * irpf / 100));
-    System.out.println("---------------------------------");
-    System.out.printf("|%-20s %10.2f|\n", "Sueldo neto", sueldoNeto);
-    System.out.println("---------------------------------");
+    if ((dias < 0) || (dias > 31)) {
+      System.out.println("El numero de días indicado no se corresponde con la cantidad de dias que tiene el mes");
+
+    } else {
+      dietaMensual = dias * dietas;
+      sueldoBruto = sueldoBase + dietaMensual;
+      sueldoNeto = sueldoBruto + (sueldoBruto * irpf / 100);
+      System.out.println("---------------------------------");
+      System.out.printf("|%-20s %10.2f|\n", "Sueldo base", sueldoBase);
+      System.out.printf("|%-20s %10.2f|\n", ("Dietas (" + dias + " viajes)"), dietaMensual);
+      System.out.println("---------------------------------");
+      System.out.printf("|%-20s %10.2f|\n", "Sueldo bruto", sueldoBruto);
+      System.out.printf("|%-20s %10.2f|\n", ("Retencion IRPF " + irpf + "%"), (sueldoBruto * irpf / 100));
+      System.out.println("---------------------------------");
+      System.out.printf("|%-20s %10.2f|\n", "Sueldo neto", sueldoNeto);
+      System.out.println("---------------------------------");
+    }
   }
 }
