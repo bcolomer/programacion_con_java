@@ -14,7 +14,6 @@ public class T04Ejercicio29R27 {
     String beber = "";
     double precioComer = 0;
     double precioBeber = 0;
-    double sumaTicket = 0;
 
     System.out.println("---Cafeteria ALAN TURING---");
     System.out.print("¿Que ha pedido para comer? palmera, donut o pitufo: ");
@@ -54,7 +53,6 @@ public class T04Ejercicio29R27 {
         precioBeber = 1.5;
       }
       System.out.printf("%-25s %-6.2f€\n", beber, precioBeber);
-
     } else {
       System.out.println("La bebida introducida no es correcta.");
     }
@@ -62,6 +60,5 @@ public class T04Ejercicio29R27 {
     // System.out.printf("%-25s %-6.2f€\n", beber, precioBeber);
     System.out.printf("%-25s %-6.2f€\n", "Total desayuno: ", (precioBeber + precioComer));
     System.out.println("Gracias por su compra!");
-
   }
 }
