@@ -13,9 +13,15 @@ public class T04Ejercicio27R25 {
   public static void main(String[] args) {
 
     String sabor = "";
-    String chocolate = "";
     String nata = "";
     String nombre = "";
+    double manzana = 18;
+    double fresa = 16;
+    double chocoBlanco = 15;
+    double chocoNegro = 14;
+    double precioNata = 2.5;
+    double precioNombre = 2.75;
+    double total = 0;
 
     System.out.println("-----PASTELERIA-----");
     System.out.println("Indique de que sabor desea la tarta:");
@@ -23,13 +29,47 @@ public class T04Ejercicio27R25 {
     sabor = (System.console().readLine()).toLowerCase();
     if (sabor.equals("chocolate")) {
       System.out.println("¿La desea de chocolante blanco o negro?");
-      chocolate = System.console().readLine().toLowerCase();
+      sabor = System.console().readLine().toLowerCase();
     }
     System.out.println("¿Desea añadir nata: s/n");
     nata = (System.console().readLine()).toLowerCase();
     System.out.println("Desea agregar un nombre escrito: s/n:");
     nombre = (System.console().readLine()).toLowerCase();
 
-  }
+    switch (sabor) {
+      case "manzana":
+        System.out.printf("%-30s %-7.2f€\n", "Tarta de manzana: ", manzana);
+        total = manzana;
 
+        break;
+      case "fresa":
+        System.out.printf("%-30s %-7.2f€\n", "Tarta de fresa: ", fresa);
+        total = fresa;
+        break;
+
+      case "blanco":
+        System.out.printf("%-30s %-7.2f€\n", "Tarta de chocolate blanco: ", chocoBlanco);
+        total = chocoBlanco;
+
+        break;
+
+      case "negro":
+        System.out.printf("%-30s %-7.2f€\n", "Tarta de chocolate negro: ", chocoNegro);
+        total = chocoNegro;
+
+        break;
+
+      default:
+        break;
+    }
+    if (nata.equals("s")) {
+      System.out.printf("%-31s %-6.2f€\n", "Con nata: ", precioNata);
+      total = total + precioNata;
+    }
+    if (nombre.equals("s")) {
+      System.out.printf("%-31s %-6.2f€\n", "Con Nombre: ", precioNombre);
+      total = total + precioNombre;
+    }
+    System.out.printf("%-30s %-7.2f€\n", "Total: ", total);
+  }
 }
