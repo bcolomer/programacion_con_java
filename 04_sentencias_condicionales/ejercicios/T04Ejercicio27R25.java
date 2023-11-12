@@ -28,7 +28,7 @@ public class T04Ejercicio27R25 {
     System.out.println("Los sabores disponibles son: manzana, fresa y chocolate");
     sabor = (System.console().readLine()).toLowerCase();
     if (sabor.equals("chocolate")) {
-      System.out.println("¿La desea de chocolante blanco o negro?");
+      System.out.println("¿La desea de chocolante: blanco o negro?");
       sabor = System.console().readLine().toLowerCase();
     }
     System.out.println("¿Desea añadir nata: s/n");
@@ -40,26 +40,21 @@ public class T04Ejercicio27R25 {
       case "manzana":
         System.out.printf("%-30s %-7.2f€\n", "Tarta de manzana: ", manzana);
         total = manzana;
-
         break;
       case "fresa":
         System.out.printf("%-30s %-7.2f€\n", "Tarta de fresa: ", fresa);
         total = fresa;
         break;
-
       case "blanco":
         System.out.printf("%-30s %-7.2f€\n", "Tarta de chocolate blanco: ", chocoBlanco);
         total = chocoBlanco;
-
         break;
-
       case "negro":
         System.out.printf("%-30s %-7.2f€\n", "Tarta de chocolate negro: ", chocoNegro);
         total = chocoNegro;
-
         break;
-
       default:
+        System.out.println("El sabor introducido no esta actualmente disponible");
         break;
     }
     if (nata.equals("s")) {
