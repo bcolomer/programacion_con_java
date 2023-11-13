@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class T05Ejemplo01 {
+public class BucleFor {
   public static void main(String[] args) {
 
     /*
