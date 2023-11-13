@@ -1,4 +1,4 @@
-public class BuclesDoDowhileFor {
+public class DiferenciaBuclesDoDowhileFor {
   public static void main(String[] args) {
     System.out.println("10 primeros numeros");
     int contador = 1;
