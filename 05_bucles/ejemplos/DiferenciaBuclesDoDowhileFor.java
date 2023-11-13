@@ -25,6 +25,12 @@ public class DiferenciaBuclesDoDowhileFor {
     for (contador = 1; contador <= 10/* condicion de fin de bucle */; contador++) {
       System.out.print(contador);
     }
+
+    for (int i = 0; i <= 50;) {
+      System.out.println(i);
+      i++; // esto es igual que poner la expresion arriba en el 3er espacio
+
+    }
   }
 
 }
