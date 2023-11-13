@@ -17,7 +17,7 @@ public class BucleFor {
     int edad = s.nextInt();
     s.close();
     for (int i = 1; i <= edad; i++) {
-      System.out.println("ha cumplido " + i);
+      System.out.print(" - ha cumplido " + i);
     }
   }
 
