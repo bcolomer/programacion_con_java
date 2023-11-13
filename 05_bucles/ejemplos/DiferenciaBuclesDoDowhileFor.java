@@ -29,8 +29,18 @@ public class DiferenciaBuclesDoDowhileFor {
     for (int i = 0; i <= 50;) {
       System.out.println(i);
       i++; // esto es igual que poner la expresion arriba en el 3er espacio
-
     }
-  }
 
+    /*
+     * for (; i <=50; ) { si omito la primera y la tercera el bucle funciona igual,
+     * si omito las 3
+     * se convierte en bucle infinito
+     * 
+     * System.out.println(i);
+     * i++;
+     * 
+     * }
+     */
+
+  }
 }

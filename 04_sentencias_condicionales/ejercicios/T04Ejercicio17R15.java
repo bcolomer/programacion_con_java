@@ -14,5 +14,6 @@ public class T04Ejercicio17R15 {
     s.close();
     int ultimoNum = num % 10;
     System.out.println("La ultima cifra del numero que ha introducido es : " + ultimoNum);
+
   }
 }
