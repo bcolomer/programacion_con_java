@@ -17,9 +17,12 @@ public class Dowhile {
     System.out.println("introduzca numeros");
     do {
       num = s.nextInt();
-      suma = suma + num;
-      contador++;
+      if (num > 0) {
+        suma = suma + num;
+      }
+      contador++;// se puede hacer un if indicando que si el numero es 0 que no sume contador
     } while (num != 0);
+
     System.out.println("contador: " + (contador - 1));
     System.out.println("suma es: " + suma);
     s.close();
