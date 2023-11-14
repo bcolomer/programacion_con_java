@@ -39,7 +39,11 @@ public class T05Ejercicio07 {
         }
       } while ((contadorIntentos < 4) && (intentoClave != claveCorrecta));
       if (contadorIntentos == 4) {
-        System.out.println("Ha superado el numero de intentos. Puede volver a intentarlo en 4 horas");
+        System.out.println("==========================================");
+        System.out.println("|| La caja fuerte esta bloqueada porque ||");
+        System.out.println("|| ha superado el numero de intentos.   ||");
+        System.out.println("|| Puede volver a intentarlo en 4 horas ||");
+        System.out.println("==========================================");
       }
     } catch (InputMismatchException e) {
       System.out.println("Error. Debe ingresar una clave numerica.");
