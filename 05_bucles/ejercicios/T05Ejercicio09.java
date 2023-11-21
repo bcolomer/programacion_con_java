@@ -8,57 +8,37 @@
  * 
  * @autor Barbara Colomer
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class T05Ejercicio09 {
   public static void main(String[] args) {
-    int num = 0;
-    int a = -10;
-    int b = -1;
-    int c = 1;
-    int d = 10;
-    int digitos = 1;
+    long num = 0;
+    long a = -10;
+    long b = -1;
+    long c = 1;
+    long d = 10;
+    long digitos = 1;
 
     Scanner s = new Scanner(System.in);
     System.out.print("Escriba un numero para saber cuantos cifras tiene:");
-    num = s.nextInt();
-    s.close();
-    while (((num > a) && (num <= b)) || ((num >= c) && (num < d))) {
-      System.out.printf("El numero introducido tiene %d digitos", digitos);
-      digitos = digitos + 1;
-      a = a * 10;
-      b = b * 10;
-      c = c * 10;
-      d = d * 10;
-    }
-    
-    do {
-      if  {
-       
-        
-         
+
+    try {
+      num = s.nextLong();
+      s.close();
+      while (!(((num > a) && (num <= b)) || ((num >= c) && (num < d)))) {
+        digitos = digitos + 1;
+
+        a = a * 10;
+        b = b * 10;
+        c = c * 10;
+        d = d * 10;
       }
-      
-    //} while (((num > a) && (num <= b)) || ((num >= c) && (num < d)));
+      System.out.printf("El numero introducido tiene %d digitos\n", digitos);
+    } catch (InputMismatchException e) {
+      System.out.println(
+          "el valor introducido no es un numero entero. Error: InputMismatchException, si cree que es un error contacte con servicio tecnico");
+    }
+
   }
 }
-}
-/*
- * for (int i = 0; i < num; i++) {
- * digitos = digitos + 1;
- * if ((num > a) && (num < b)) {
- * System.out.printf("El numero introducido tiene %d digito/s\n", digitos);
- * }
- * a = a * 10;
- * b = b * 10;
- */
-
-/*
- * System.out.println("i vale " + i);
- * System.out.println("digitos vale " + digitos);
- * System.out.println("num  vale " + num);
- * System.out.println("a vale " + a);
- * System.out.println("b vale " + b);
- * }
- */
-// digitos = digitos + 1;
