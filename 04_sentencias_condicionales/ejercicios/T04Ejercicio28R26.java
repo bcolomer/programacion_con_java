@@ -48,6 +48,13 @@ public class T04Ejercicio28R26 {
        * } else {
        * 
        * }
+       * 
+       * switch
+       * case "piedra":
+       * if (jugador2.equals"piedra )empate
+       * else if jugador 2 papel gana jugador tal
+       * else gana jugador tal
+       * 
        */
 
     } else {
