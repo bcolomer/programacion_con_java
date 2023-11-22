@@ -15,5 +15,11 @@ public class T05Ejercicio01 {
       resultado = j * 5;
       System.out.print(resultado + (","));
     }
+    for (int k = 0; k <= 100; k++) {
+      if (k % 5 == 0) {
+        System.out.print(k + ", ");
+      }
+
+    }
   }
 }

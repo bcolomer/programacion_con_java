@@ -41,7 +41,7 @@ public class Ejercicio02 {
     double subtotal = 0;
     double total = 0;
 
-    System.out.printf("\033[1mARAGOG'S LAIR: PUNTO DE VENTA \uDD77 \033[0m \n"); //he modificado agregando negrita
+    System.out.printf("\033[1mARAGOG'S LAIR: PUNTO DE VENTA \uDD77 \033[0m \n"); // he modificado agregando negrita
     System.out.println("================================");
     System.out.print("1. Comida \n2. Bebidas \n3. Postres\n");
     System.out.print("Ingrese una opcion para su pedido:");
@@ -140,7 +140,7 @@ public class Ejercicio02 {
       promo = System.console().readLine().toLowerCase();
       if ((promo.equals("s")) || (promo.equals("si"))) {
         System.out.println("Introduce el descuento a aplicar: ");
-        descuento = s.nextInt();
+        descuento = s.nextDouble();
       } else {
         descuento = 0;
       }

@@ -38,7 +38,21 @@ public class T05Ejercicio09 {
     } catch (InputMismatchException e) {
       System.out.println(
           "el valor introducido no es un numero entero. Error: InputMismatchException, si cree que es un error contacte con servicio tecnico");
+      /* solucion profesor: */
+      long numero = 0;
+      long temporal = numero;
+      System.out.println("introducte nuerm");
+      numero = s.nextLong();
+      int contador = 1;
+      while (temporal >= 10) {
+        temporal /= 10;
+        contador++;
+        /*
+         * clase math sobre el numero es esta la clase abs, que lo que hace es
+         * positivizar un negativo y dejar positivo el positivo.
+         */
+      }
+      System.out.println("el numero tiene tnatos digitos " + contador);
     }
-
   }
 }

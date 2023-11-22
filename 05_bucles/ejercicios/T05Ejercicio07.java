@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class T05Ejercicio07 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
-    int claveCorrecta = 7643;
+    final int CLAVE_CORRECTA = 7643; // la declaro constante porque la clave no cambiara
     int intentoClave = 0;
     int contadorIntentos = 0;
     System.out.println("-----ACCESO A CAJA FUERTE-----");
@@ -30,14 +30,14 @@ public class T05Ejercicio07 {
           System.out.println("La clave debe ser un numero entero positivo de 4 cifras");
           System.out.printf("Le quedan %d intentos\n", (4 - contadorIntentos));
         } else {
-          if (intentoClave == claveCorrecta) {
+          if (intentoClave == CLAVE_CORRECTA) {
             System.out.println("La caja fuerte se ha abierto satisfactoriamente. \nRecuerde volver a cerrarla.");
           } else {
             System.out.println("Lo siento, esa no es la combinación.");
             System.out.printf("Le quedan %d intentos\n", (4 - contadorIntentos));
           }
         }
-      } while ((contadorIntentos < 4) && (intentoClave != claveCorrecta));
+      } while ((contadorIntentos < 4) && (intentoClave != CLAVE_CORRECTA));
       if (contadorIntentos == 4) {
         System.out.println("==========================================");
         System.out.println("|| La caja fuerte esta bloqueada porque ||");
