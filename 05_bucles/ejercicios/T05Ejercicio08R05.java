@@ -7,7 +7,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class T05Ejercicio08 {
+public class T05Ejercicio08R05 {
   public static void main(String[] args) {
     int num = 0;
     Scanner s = new Scanner(System.in);

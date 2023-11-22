@@ -9,7 +9,7 @@ cuando meta un número negativo.
  */
 import java.util.Scanner;
 
-public class T05Ejercicio10 {
+public class T05Ejercicio10R07 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     double num = 0;

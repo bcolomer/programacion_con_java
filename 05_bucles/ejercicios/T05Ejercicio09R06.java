@@ -11,7 +11,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class T05Ejercicio09 {
+public class T05Ejercicio09R06 {
   public static void main(String[] args) {
     long num = 0;
     long a = -10;

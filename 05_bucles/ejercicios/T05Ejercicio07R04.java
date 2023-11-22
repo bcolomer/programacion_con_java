@@ -11,7 +11,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class T05Ejercicio07 {
+public class T05Ejercicio07R04 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     final int CLAVE_CORRECTA = 7643; // la declaro constante porque la clave no cambiara
