@@ -17,12 +17,11 @@ public class T05Ejercicio14R11 {
     System.out.print("Escriba un numero entero positivo para el exponente: ");
     do {
       numExp = s.nextDouble();
-    } while ((numExp < 0) || (numExp % 10 != 0));
+    } while ((numExp < 0) && (numExp % 10 != 0));
     /*
      * no enteindo porque tiene que ser or cuando quiero que las dos se cumplan a la
      * vez
      * tampoco se como hacer si es menor a 10 para saber si es entero o decimal
      */
-
   }
 }

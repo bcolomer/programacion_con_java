@@ -17,7 +17,8 @@ public class T05Ejercicio12R09 {
     int a = 0;
     int b = 1;
     int c;
-    System.out.print("Serie de Fibonacci, indique cuantos valores desea conocer: ");
+    System.out.printf("\033[1m ---SERIE DE FIBONACCI---\033[0m\n");
+    System.out.print("Indique cuantos valores desea conocer: ");
     try {
       fibonacci = s.nextInt();
       if (fibonacci == 1) {
