@@ -6,6 +6,7 @@
  * @autor Barbara Colomer
  * 
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class T05Ejercicio16R13 {
@@ -13,24 +14,25 @@ public class T05Ejercicio16R13 {
     Scanner s = new Scanner(System.in);
     boolean primo = false;
     int num = 0;
-    int esPrimo;
 
     System.out.println("Introduzca un número para saber si es o no primo");
-    num = s.nextInt();
+    try {
 
-    for (int i = num - 1; i >= 2; i--) {
-      if (num % i == 0) {
-        primo = true;
+      num = s.nextInt();
+      for (int i = num - 1; i >= 2; i--) {
+        if (num % i == 0) {
+          primo = true;
+        }
+
       }
-
+      s.close();
+      if (primo) {
+        System.out.println("El numero no es primo");
+      } else {
+        System.out.println("El numero introducido es primo");
+      }
+    } catch (InputMismatchException e) {
+      System.out.println("Error: InputMismatchException \nNo ha introducido valores validos");
     }
-    s.close();
-    if (primo) {
-      System.out.println("El numero no es primo");
-    } else {
-      System.out.println("El numero introducido es primo");
-
-    }
-
   }
 }
