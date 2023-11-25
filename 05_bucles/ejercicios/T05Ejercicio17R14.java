@@ -21,11 +21,11 @@ public class T05Ejercicio17R14 {
       s.close();
       for (int i = num; i < num + 100; i++) {
         sumaNum = sumaNum + (i);
-        System.out.println("suma por vuelta " + sumaNum);
+
       }
     } catch (Exception e) {
       System.out.println("El numero es incorrecto");
     }
-    System.out.println("suma total = " + sumaNum);
+    System.out.println("La suma de los 100 números siguientes a el numero introducido es: " + sumaNum);
   }
 }
