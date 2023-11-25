@@ -16,10 +16,8 @@ public class T05Ejercicio18R15 {
     int numB = 0;
     int auxiliar = 0;
     try {
-
       System.out.println("Introduzca un numero entero: ");
       numA = s.nextInt();
-
       do {
         System.out.println("El primer numero introducido es " + numA);
         System.out.println("Introduzca otro número \nAsegurese que sean distintos");
@@ -31,7 +29,7 @@ public class T05Ejercicio18R15 {
     s.close();
     if (numA < numB) {
       auxiliar = numA;
-      for (int i = numA; auxiliar <= numB; i++) {
+      for (int i = numA; auxiliar <= numB; i++) { // porque me marca un error como que i no esta siendo usado
         System.out.printf("%d, ", auxiliar);
         auxiliar = auxiliar + 7;
       }
@@ -41,7 +39,6 @@ public class T05Ejercicio18R15 {
         System.out.printf("%d, ", auxiliar);
         auxiliar = auxiliar + 7;
       }
-
     }
   }
 }
