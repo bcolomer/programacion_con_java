@@ -12,7 +12,7 @@ public class T05Ejercicio19R16 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     int altura = 0;
-    int r = 0;
+    // int r = 0;
     char relleno;
     System.out.println("\033[1m------BIENVENIDO A EGIPTO------\033[0m");
     System.out.println("Introduzca la altura para la piramide");
@@ -26,12 +26,12 @@ public class T05Ejercicio19R16 {
         System.out.print(" ");
       }
       for (int k = 1; k <= i; k++) {
-        r = k + 3;
+        // r = k + 3;
         System.out.print(relleno);
       }
       for (int l = 2; l <= i; l++) {// la otra mitad de la piramide empieza en dos
         // para que en la 1era linea imprima solo 1
-        r = l + 3;
+        // r = l + 3;
         System.out.print(relleno);
         // System.out.print("*");
       }
