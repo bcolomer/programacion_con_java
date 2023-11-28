@@ -22,15 +22,15 @@ public class T05Ejercicio23R20 {
       suma = suma + num;
       contadorNum++;
 
-    } while (suma < 10);
+    } while (suma < 10000);
 
-    if (suma >= 10) {
+    if (suma >= 10000) {// esto es para descontar el ultimo numero que supero el maximo permitido
       suma = suma - num;
       contadorNum = contadorNum - 1;
     }
     media = suma / contadorNum;
     System.out.printf(
-        "El la suma total de los numeros introducidos es %.2f,  usted ha introducido %d numeros, y la media es %.2f",
+        "El la suma total de los numeros introducidos es %.2f,  usted ha introducido %d numeros los cuales su suma no exceden el valor indicado, y la media es %.2f",
         suma, contadorNum, media);
     s.close();
   }
