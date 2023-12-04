@@ -161,5 +161,12 @@ public class Ejercicio02 {
     }
     s.close();
   }
-
+/**
+ * _ No hacen falta tantas variables.
+ * _ No se gestionan correctamente los errores de introducción de datos. Cuando
+ * introduces un valor erróneo la aplicación continúa preguntando el número de
+ * unidades.
+ * _ La respuesta a la promoción debía ser únicamente 's' o 'n'.
+ * _ No se muestra el caracter UNICODE de la araña.
+ */
 }
