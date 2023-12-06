@@ -33,8 +33,7 @@ public class T05Ejercicio57 {
         }
 
       }
-      anchuraEspacios++;15
-      
+      anchuraEspacios++;
       anchuraAsteriscos--;
       System.out.println();
     }
