@@ -26,8 +26,6 @@ public class T05Ejercicio54 {
         } else {
           System.out.print("*");
         }
-
-        // System.out.print("x");
       }
       anchura = anchura - 1;
       System.out.println();
