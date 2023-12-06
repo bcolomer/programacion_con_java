@@ -29,13 +29,16 @@ public class T05Ejercicio18R15 {
     s.close();
     if (numA < numB) {
       auxiliar = numA;
-      for (int i = numA; auxiliar <= numB; i++) { // porque me marca un error como que i no esta siendo usado
+      for (; auxiliar <= numB;) {
+        // for (int i = numA; auxiliar <= numB; i++) me marca un error como que i no
+        // esta siendo usado
         System.out.printf("%d, ", auxiliar);
         auxiliar = auxiliar + 7;
       }
     } else {
       auxiliar = numB;
-      for (int i = numB; auxiliar <= numA; i++) {
+      for (; auxiliar <= numA;) {
+        // for (int i = numB; auxiliar <= numA; i++) {aqui igual no entiendo porque
         System.out.printf("%d, ", auxiliar);
         auxiliar = auxiliar + 7;
       }
