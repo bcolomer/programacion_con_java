@@ -18,7 +18,6 @@ public class T05Ejercicio40 {
     int mitadAespacios = 0;
     int lineaDerecha = 0;
 
-    /** colocar la comprobacion de que sea mayor a 3 e impar */
     System.out.println("introduzca altura  para rombo, debe ser impar mayor a 3");
     do {
       altura = s.nextInt();
@@ -33,6 +32,7 @@ public class T05Ejercicio40 {
     mitadB = altura - 2;
     mitadAespacios = mitadA;
 
+    // mitad superior del rombo y fila central
     for (int i = 0; i < mitadA + 1; i++) { // la mitad superior del rombo las la linea del medio
       for (int j = 0; j < mitadAespacios; j++) {// esto controla los espacios de la izquierda
         System.out.print(" ");
@@ -45,15 +45,15 @@ public class T05Ejercicio40 {
         } else {
           System.out.print("*");
         }
-
       }
       System.out.println();
     }
+
+    // mitad inferior del rombo
     for (int i = 0; i < mitadA; i++) {
       for (int j = 0; j < i + 1; j++) {
-        System.out.print(" ");// esto controla los espacios de la iaquierda de la mitad inf
+        System.out.print(" ");// esto controla los espacios de la izquierda de la mitad inf
       }
-      // lineaDerecha = (i * 2) + 1;
       for (int j = 0; j < mitadB; j++) {
         if (((i != mitadA) && (j != 0)) && ((i != mitadA) && (j < mitadB - 1))) {// cambiar esto que no funciona
           System.out.print(" ");
