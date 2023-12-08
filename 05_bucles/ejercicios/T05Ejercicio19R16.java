@@ -22,11 +22,11 @@ public class T05Ejercicio19R16 {
     s.close();
     for (int i = 0; i < altura; i++) {
       for (int j = 0; j < altura - i; j++) {
-        System.out.print("_");
+        System.out.print(" ");
 
       }
       for (int j = 0; j < (i * 2) + 1; j++) {
-        System.out.print("*");
+        System.out.print(relleno);
       }
       System.out.println();
     }

@@ -11,8 +11,7 @@ public class T05Ejercicio20R17 {
     Scanner s = new Scanner(System.in);
     int altura = 0;
     char borde;
-    int columna;
-    int incremento = 1;
+
     int cantidadEspacios = 0;
     System.out.println("\033[1mNavidad´s Time\033[0m");
     System.out.println("Introduzca la altura para su arbolito sin decoraciones");
@@ -39,6 +38,8 @@ public class T05Ejercicio20R17 {
     }
 
     /*
+     * int columna;
+     * int incremento = 1;
      * for (fila = 1; fila <= altura; fila++) {
      * for (columna = 1; columna <= (altura - fila); columna++) {
      * System.out.print(" ");

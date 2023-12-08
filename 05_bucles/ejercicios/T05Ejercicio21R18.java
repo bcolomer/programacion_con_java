@@ -7,7 +7,7 @@ indicar el final de la introducción de datos pero no se incluye en el cómputo.
  * 
  * @autor Barbara Colomer
  */
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 public class T05Ejercicio21R18 {
@@ -34,6 +34,7 @@ public class T05Ejercicio21R18 {
         }
       }
     } while (numero >= 0);
+    s.close();
     media = sumaImpares / contadorImpares;
     System.out.printf(
         "La cantidad de numeros introducidos es %d, la media de los numeros impares es %.2f y el mayor de los numeros pares es %d",
