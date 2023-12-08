@@ -13,6 +13,7 @@ public class T05Ejercicio20R17 {
     char borde;
     int columna;
     int incremento = 1;
+    int cantidadEspacios = 0;
     System.out.println("\033[1mNavidad´s Time\033[0m");
     System.out.println("Introduzca la altura para su arbolito sin decoraciones");
     altura = s.nextInt();
@@ -20,26 +21,44 @@ public class T05Ejercicio20R17 {
     borde = s.next().charAt(0);
 
     s.close();
-    int fila;
-    for (fila = 1; fila <= altura; fila++) {
-      for (columna = 1; columna <= (altura - fila); columna++) {
+    for (int i = 0; i < altura; i++) {
+      for (int j = 0; j < altura - i; j++) {
         System.out.print(" ");
-
       }
-      for (columna = 1; columna <= incremento; columna++) {
-        if ((columna == 1) || (columna == incremento) || (fila == altura)) {
-          System.out.print(borde);
-        } else {
+      cantidadEspacios = (i * 2) + 1;
+      for (int j = 0; j < cantidadEspacios; j++) {
+        if ((i != 0) && (i != altura - 1) && (j != 0) && (j != cantidadEspacios - 1)) {
+
           System.out.print(" ");
+        } else {
+          System.out.print(borde);
         }
 
       }
-      incremento = incremento + 2;
-      System.out.println("");
-
+      System.out.println();
     }
 
-    System.out.println("mi piramide hueca trocha");
+    /*
+     * for (fila = 1; fila <= altura; fila++) {
+     * for (columna = 1; columna <= (altura - fila); columna++) {
+     * System.out.print(" ");
+     * 
+     * }
+     * for (columna = 1; columna <= incremento; columna++) {
+     * if ((columna == 1) || (columna == incremento) || (fila == altura)) {
+     * System.out.print(borde);
+     * } else {
+     * System.out.print(" ");
+     * }
+     * 
+     * }
+     * incremento = incremento + 2;
+     * System.out.println("");
+     * 
+     * }
+     * 
+     * System.out.println("mi piramide hueca trocha");
+     */
     /*
      * for (int i = 1; i < altura; i++) {
      * System.out.println("");
