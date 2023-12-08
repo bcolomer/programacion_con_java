@@ -6,21 +6,38 @@
 public class T05Ejercicio22R19 {
   public static void main(String[] args) {
 
-    for (int num = 2; num <= 100; num++) {
-      boolean esPrimo = true;// se pone aqui y no fuera del bucle porque tiene que
-      // controlar como verdadero
-      // en cada iteracion
-      for (int i = 2; i < num; i++) {
-        if (num % i == 0) {
+    for (int i = 2; i <= 100; i++) {
+      boolean esPrimo = true;
+      for (int j = 2; j < i; j++) {
+        if (i % j == 0) {
           esPrimo = false;
+
         }
       }
       if (esPrimo) {
-        System.out.print(num + "-");
+        System.out.print(i + " ");
       }
     }
+
   }
-}// funciona bien
+}
+/*
+ * for (int num = 2; num <= 100; num++) {
+ * boolean esPrimo = true;// se pone aqui y no fuera del bucle porque tiene que
+ * // controlar como verdadero
+ * // en cada iteracion
+ * for (int i = 2; i < num; i++) {
+ * if (num % i == 0) {
+ * esPrimo = false;
+ * }
+ * }
+ * if (esPrimo) {
+ * System.out.print(num + "-");
+ * }
+ * }
+ * }
+ */
+// funciona bien
 
 // solucion profesor:
 /*
