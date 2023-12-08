@@ -20,17 +20,28 @@ public class T05Ejercicio19R16 {
     System.out.println("Introduzca el caracter de relleno, solo se tendrá en cuenta el primer caracter introducido");
     relleno = s.next().charAt(0);
     s.close();
+    for (int i = 0; i < altura; i++) {
+      for (int j = 0; j < altura - i; j++) {
+        System.out.print("_");
 
-    for (int fila = 0; fila < altura; fila++) {
-      for (int j = 0; j < altura - fila; j++) {// esto controla los espacios
-        System.out.print(" ");
       }
-      for (int i = 0; i < (fila * 2) + 1; i++) {
-        System.out.print(relleno);
+      for (int j = 0; j < (i * 2) + 1; j++) {
+        System.out.print("*");
       }
       System.out.println();
     }
 
+    /*
+     * for (int fila = 0; fila < altura; fila++) {
+     * for (int j = 0; j < altura - fila; j++) {// esto controla los espacios
+     * System.out.print(" ");
+     * }
+     * for (int i = 0; i < (fila * 2) + 1; i++) {
+     * System.out.print(relleno);
+     * }
+     * System.out.println();
+     * }
+     */
     /*
      * for (int i = 1; i <= altura; i++) {// esto imprime 3 lineas aunque la primera
      * esta vacia
