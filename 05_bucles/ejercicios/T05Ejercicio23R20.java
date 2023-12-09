@@ -10,28 +10,50 @@ introducidos y la media.
 
 public class T05Ejercicio23R20 {
   public static void main(String[] args) {
+
     Scanner s = new Scanner(System.in);
-    double num = 0;
+    double numero = 0;
+    int contador = 0;
     double suma = 0;
-    int contadorNum = 0;
     double media = 0;
 
-    System.out.println("Introduzca numeros");
+    System.out.println("Introduzca numeros separados por Enter, el programa finalizara cuando la suma supere 10.000");
     do {
-      num = s.nextDouble();
-      suma = suma + num;
-      contadorNum++;
+      numero = s.nextDouble();
+      contador++;
+      suma = suma + numero;
 
-    } while (suma < 10000);
-
-    if (suma >= 10000) {// esto es para descontar el ultimo numero que supero el maximo permitido
-      suma = suma - num;
-      contadorNum = contadorNum - 1;
-    }
-    media = suma / contadorNum;
+    } while (suma <= 10000);
+    media = suma / contador;
     System.out.printf(
-        "El la suma total de los numeros introducidos es %.2f,  usted ha introducido %d numeros los cuales su suma no exceden el valor indicado, y la media es %.2f",
-        suma, contadorNum, media);
+        "La suma de los numeros introducidos es %.2f, la cantidad de numeros que ha introducido es %d, y la media de ellos es %.2f",
+        suma, contador, media);
+
+    /*
+     * double num = 0;
+     * double suma = 0;
+     * int contadorNum = 0;
+     * double media = 0;
+     * 
+     * System.out.println("Introduzca numeros");
+     * do {
+     * num = s.nextDouble();
+     * suma = suma + num;
+     * contadorNum++;
+     * 
+     * } while (suma < 10000);
+     * 
+     * if (suma >= 10000) {// esto es para descontar el ultimo numero que supero el
+     * maximo permitido
+     * suma = suma - num;
+     * contadorNum = contadorNum - 1;
+     * }
+     * media = suma / contadorNum;
+     * System.out.printf(
+     * "El la suma total de los numeros introducidos es %.2f,  usted ha introducido %d numeros los cuales su suma no exceden el valor indicado, y la media es %.2f"
+     * ,
+     * suma, contadorNum, media);
+     */
     s.close();
   }
 
