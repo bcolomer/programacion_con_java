@@ -19,6 +19,7 @@ public class T05Ejercicio29R26 {
     numeroA = s.nextInt();
     numeroB = s.nextInt();
     s.close();
+
     System.out.printf("Los numeros menores de %d no divisibles por %d son: ", numeroA, numeroB);
     for (int i = 1; i < numeroA; i++) {
       if (i % numeroB != 0) {

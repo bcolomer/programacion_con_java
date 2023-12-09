@@ -17,23 +17,47 @@ public class T05Ejercicio30R27 {
     String segundo = "";
     int diaA = 0;
     int diaB = 0;
+    int horaDiaA = 0;
+    int horaDiaB = 0;
+    int cantidadHoras = 0;
+
+    // falta realizar comprobacion de errores, respecto a que no se introduzcan dias
+    // validos, o que el segundo dia sea mas pequeño que el primero
 
     System.out.println("Contador de horas entre un dia y hora especifico hasta otro dia y hora especifico");
     System.out.println(
         "puede introducir los dias por su nombre o por su numero tendiendo en cuenta que el primer dia es el lunes");
+
     System.out.println("Introduzca un dia de la semana:");
     primero = s.next().toLowerCase();
-    System.out.println("Introduzca la hora");
+
+    System.out.println("Introduzca la hora en formato 24hs");
+    horaDiaA = s.nextInt();
+    if ((horaDiaA < 0) || (horaDiaA > 24)) {
+      System.out.println("la hora introducida no esta en formato 24 hs, Vuelva a introducirla:");
+      horaDiaA = s.nextInt();
+    }
 
     System.out.println("Introduzca otro dia de la semana:");
     segundo = s.next().toLowerCase();
-    System.out.println("introduzca la hora");
+    System.out.println("introduzca la hora en formato 24hs");
+    horaDiaB = s.nextInt();
+    if ((horaDiaB < 0) || (horaDiaB > 24)) {
+      System.out.println("la hora introducida no esta en formato 24 hs, Vuelva a introducirla:");
+      horaDiaB = s.nextInt();
+    }
 
     s.close();
     diaA = diasemana(primero);
     diaB = diasemana(segundo);
-    System.out.println("el primer dia ingresado es " + diaA);
-    System.out.println("el segundo dia ingresado es " + diaB);
+
+    cantidadHoras = (((diaB - diaA) - 1) * 24) + (24 - horaDiaA) + horaDiaB;
+    // System.out.println("el primer dia ingresado es " + diaA);
+    // System.out.println("el segundo dia ingresado es " + diaB);
+    System.out.printf(
+        "La cantidad de horas transcurridas entre %s y %s  a las horas anteriormente indicadas es de %d horas", primero,
+        segundo,
+        cantidadHoras);
 
   }
 
