@@ -13,7 +13,6 @@ public class T05Ejercicio39R36 {
 
     Scanner s = new Scanner(System.in);
     int numero = 0;
-    int factorial;
 
     System.out.println("introduzca un numero:");
     numero = s.nextInt();
