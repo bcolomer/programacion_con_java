@@ -49,7 +49,7 @@ public class T05Ejercicio35R32 {
     }
     alturaB = altura / 2;
     // 2da mitad de la piramide sin la base:
-    for (int i = 0; i <= alturaB + 2; i++) { // esto controla las filas
+    for (int i = 0; i <= alturaB + 1; i++) { // esto controla las filas
       for (int j = 1; j < alturaB; j++) { // esto controla los espacios
         System.out.print(" ");
       }
