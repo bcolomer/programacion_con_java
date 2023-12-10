@@ -46,15 +46,18 @@ public class T05Ejercicio38R35 {
       System.out.println();
     }
 
-    for (int i = 0; i < mitadB; i++) {
-      for (int j = 0; j < mitadB - i - 1; j++) {
-        System.out.print("_");
-      }
+    for (int i = 1; i <= mitadB; i++) {
 
-      for (int j = 0; j < (mitadB * i) + 2; j++) {
+      for (int j = 0; j < mitadB - i; j++) {
+        System.out.print(" ");
+      }
+      System.out.print("*");
+      if (altura == 3) {
         System.out.print("*");
       }
-
+      for (int j = 0; j < estrellasB; j++) {
+        System.out.print("*");
+      }
       estrellasB = estrellasB + 2;
       System.out.println();
 
