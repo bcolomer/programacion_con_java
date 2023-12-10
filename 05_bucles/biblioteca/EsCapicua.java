@@ -12,7 +12,7 @@ public class EsCapicua {
   }
 
   public static boolean capicua(long num) {
-    // long numero;
+    long numero;
     long temporal;
     long inverso = 0;
     boolean capi;

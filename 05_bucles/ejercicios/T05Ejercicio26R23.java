@@ -17,8 +17,7 @@ public class T05Ejercicio26R23 {
     int invertido = 0;
     int digito = 0;
     int contador = 1;
-    int contadordigito = 0;
-    int respuesta = 0;
+
     Scanner s = new Scanner(System.in);
 
     System.out.println("introduzca un numero");
@@ -45,7 +44,6 @@ public class T05Ejercicio26R23 {
       if (modulo == digito) {
         System.out.print(i + " ");
       }
-
     }
   }
 }

@@ -29,7 +29,7 @@ public class T05Ejercicio36R33 {
       invertido = (invertido * 10) + modulo;
 
     } while (numero > 0);
-    System.out.println("invertido " + invertido);
+
     if (copiaNumero == invertido) {
       System.out.printf("El numero %d es capicua", copiaNumero);
     } else {
