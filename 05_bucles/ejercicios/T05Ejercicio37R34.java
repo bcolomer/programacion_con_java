@@ -19,30 +19,16 @@ public class T05Ejercicio37R34 {
     System.out.println("introduzca un numero para su conversion: ");
     numero = s.nextInt();
     s.close();
-    // invertido = Matematicas.voltea(numero);
-    long cuenta = contador(numero);
-    System.out.println(cuenta);
+    invertido = Matematicas.voltea(numero);
+    contador = Matematicas.digitos(numero);
 
-    /*
-     * for (int i = 0; i < contador; i++) {
-     * modulo = invertido % 10;
-     * invertido = invertido / 10;
-     * for (int j = 0; j < modulo; j++) {
-     * System.out.print("|");
-     * }
-     * System.out.print(" - ");
-     * }
-     */
-  }
-
-  public static int contador(long num) {
-
-    int contador = 1;
-    for (int i = 0; i < num; i++) {
-      num = num / 10;
-      contador++;
-
+    for (int i = 0; i < contador; i++) {
+      modulo = invertido % 10;
+      invertido = invertido / 10;
+      for (int j = 0; j < modulo; j++) {
+        System.out.print("|");
+      }
+      System.out.print(" - ");
     }
-    return contador;
   }
 }
