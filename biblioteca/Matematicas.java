@@ -1,22 +1,6 @@
-package t05_bucles.biblioteca;
-/**
- * Crea una biblioteca de funciones matemáticas llamada Matematicas.java que
- * contenga las
- * siguientes funciones. Recuerda que puedes usar unas dentro de otras si es
- * necesario.
- * Observa bien lo que hace cada función ya que, si las implementas en el orden
- * adecuado,
- * te puedes ahorrar mucho trabajo. Por ejemplo, la función esCapicua resulta
- * trivial
- * teniendo voltea y la función siguientePrimo también es muy fácil de
- * implementar teniendo
- * esPrimo.
- * 
- * 
- */
+package biblioteca;
 
 public class Matematicas {
-
   /**
    * Comprueba si un número es o no capicúa
    * 
@@ -263,38 +247,3 @@ public class Matematicas {
   }
 
 }
-/*
- * public class Matematicas {
- * /*
- * public static boolean capicua(long num) {
- * return true;
- * }
- */
-/*
- * public static boolean capicua(long numero) {
- * long nummero;
- * long temporal;
- * long inverso = 0;
- * boolean capi;
- * // Scanner s = new Scanner(System.in);
- * 
- * // System.out.print("Introduce un número entero positivo: ");
- * // numero = s.nextLong();
- * 
- * temporal = numero;// numero;
- * 
- * // Invertimos el número
- * for (; temporal > 0; temporal /= 10) {
- * inverso = (inverso * 10) + (temporal % 10);
- * }
- * 
- * // Comprobamos si es capicúa
- * if (numero == inverso) {
- * capi = true;
- * } else {
- * capi = false;
- * }
- * return capi;
- * }
- * }
- */

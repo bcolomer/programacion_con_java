@@ -15,8 +15,8 @@ public class T05Ejercicio48 {
     long numero = 0;
 
     long numeroPorChequear = 0;
-    int numeroSi;
-    int numeroNo;
+    int numeroSi = 0;
+    int numeroNo = 0;
 
     System.out.println("introduzca un numero y se le indicara los numeros que apareces y los que no");
     numero = s.nextLong();
@@ -36,8 +36,8 @@ public class T05Ejercicio48 {
         numero = numero / 10;
       } while (numero > 0);
 
-      // System.out.println("numeros que estan:" + numeroSi);
-      // System.out.println("numeros que no estan:" + numeroNo);
+      System.out.println("numeros que estan:" + numeroSi);
+      System.out.println("numeros que no estan:" + numeroNo);
     }
   }
 }
