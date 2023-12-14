@@ -43,7 +43,7 @@ public class Ejercicio1 {
 
             // esto imprime las lineas arriba
 
-            for (int j = 0; j <= 9; j++) {
+            for (int j = 0; j <= NumeroMayor(numero); j++) {
                 System.out.print(" ---");
             }
             System.out.println();
@@ -51,7 +51,7 @@ public class Ejercicio1 {
             System.out.printf("| %d |", modulo);
 
             // esto imprimira las lineas del medio
-            for (int j = 0; j < 9; j++) {
+            for (int j = 0; j < NumeroMayor(numero); j++) {
 
                 if (j < modulo) {
                     System.out.print(" * |");
@@ -69,7 +69,7 @@ public class Ejercicio1 {
         // esto imprime las lineas abajo
         for (
 
-                int k = 0; k <= 9; k++) {
+                int k = 0; k <= NumeroMayor(numero); k++) {
             System.out.print(" ---");
         }
     }
@@ -114,5 +114,28 @@ public class Ejercicio1 {
         } while (numero > 0);
 
         return contador;
+    }
+
+    /**
+     * funcion para saber cual es el digito mayor del numero dado
+     * 
+     * @param numero
+     * @return
+     */
+    public static int NumeroMayor(long numero) {
+        long modulo = 0;
+        long invertido = 0;
+        int digitoMayor = 0;
+
+        do {
+            modulo = numero % 10;
+            numero = numero / 10;
+            invertido = (invertido * 10) + modulo;
+            if (digitoMayor <= modulo) {
+                digitoMayor = (int) modulo;
+            }
+
+        } while (numero > 0);
+        return digitoMayor;
     }
 }
