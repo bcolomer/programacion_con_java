@@ -7,7 +7,7 @@ es primo y falso en caso contrario.
 
 public class T08Ejercicio02 {
   public static void main(String[] args) {
-    long numero = 22222222;
+    long numero = 13;
 
     System.out.println(esPrimo(numero));
   }
@@ -20,12 +20,17 @@ public class T08Ejercicio02 {
    */
   public static boolean esPrimo(long numero) {
 
-    int i = 2;
+    boolean primo = true;
+    if (numero > 2) {
 
-    while ((i <= (numero / 2)) && (numero % i != 0)) {
-      i++;
+      for (int i = 2; i < (numero / 2); i++) {
+        if (numero % i == 0) {
+          primo = false;
+        }
+
+      }
     }
 
-    return (i > (numero / 2));
+    return (primo);
   }
 }
