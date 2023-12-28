@@ -7,7 +7,7 @@ es primo y falso en caso contrario.
 
 public class T08Ejercicio02Primo {
     public static void main(String[] args) {
-        long numero = 13;
+        long numero = 4;
 
         System.out.println(esPrimo(numero));
     }
@@ -23,7 +23,7 @@ public class T08Ejercicio02Primo {
         boolean primo = true;
         if (numero > 2) {
 
-            for (int i = 2; i < (numero / 2); i++) {
+            for (int i = 2; i < ((numero / 2) + 1); i++) {
                 if (numero % i == 0) {
                     primo = false;
                 }
