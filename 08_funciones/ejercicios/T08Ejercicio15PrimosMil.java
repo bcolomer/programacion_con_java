@@ -23,7 +23,6 @@ public class T08Ejercicio15PrimosMil {
                 if (numero % i == 0) {
                     primo = false;
                 }
-
             }
         }
 
@@ -32,9 +31,7 @@ public class T08Ejercicio15PrimosMil {
 
     /**
      * funcion para mostrar los numeros primos hasta el 1000.
-     * 
-     * @param numero
-     * @return
+     *
      */
     public static void primosHastaMil() {
         for (int i = 1; i < 1000; i++) {
