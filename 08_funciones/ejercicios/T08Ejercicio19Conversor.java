@@ -58,7 +58,7 @@ public class T08Ejercicio19Conversor {
      */
     public static long HexaDecimal(String numeroHexa) {
         long decimal = 0;
-        int longNumero = numeroHexa.length();
+        // int longNumero = numeroHexa.length();
 
         return decimal;
     }
