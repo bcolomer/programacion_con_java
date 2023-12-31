@@ -21,18 +21,6 @@ public class T08Ejercicio43TrianRell2 {
         System.out.println(lineaSuperior(altura));
         System.out.println(lineaMedio(altura));
 
-        /*
-         * for (int fila = 1; fila < altura; fila++) {
-         * for (int i = 0; i < fila; i++) {
-         * System.out.print("-");
-         * }
-         * for (int i = 0; i < altura - fila; i++) {
-         * System.out.print("*");
-         * }
-         * System.out.println();
-         * }
-         */
-
     }
 
     /**
@@ -51,6 +39,12 @@ public class T08Ejercicio43TrianRell2 {
         return lineaSuperior;
     }
 
+    /**
+     * funcion para imprimir espacios por linea
+     * 
+     * @param fila
+     * @return
+     */
     public static String espacios(int fila) {
         String espacios = "";
         for (int i = 0; i < fila; i++) {
@@ -59,6 +53,13 @@ public class T08Ejercicio43TrianRell2 {
         return espacios;
     }
 
+    /**
+     * funcion para imprimir estrellas por linea
+     * 
+     * @param altura
+     * @param fila
+     * @return
+     */
     public static String estrellas(int altura, int fila) {
         String estrellas = "";
         for (int i = 0; i < altura - fila; i++) {
@@ -67,13 +68,17 @@ public class T08Ejercicio43TrianRell2 {
         return estrellas;
     }
 
+    /**
+     * funcion para imprimir lineas de espacios y estrellas
+     * 
+     * @param altura
+     * @return
+     */
     public static String lineaMedio(int altura) {
         String lineaMedio = "";
         for (int fila = 1; fila < altura; fila++) {
             lineaMedio += espacios(fila) + estrellas(altura, fila) + "\n";
-
         }
-
         return lineaMedio;
     }
 }
