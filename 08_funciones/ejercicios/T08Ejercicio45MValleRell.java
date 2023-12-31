@@ -39,6 +39,12 @@ public class T08Ejercicio45MValleRell {
         return lineaInferior;
     }
 
+    /**
+     * funcion para imprimir las estrellas de cada linea
+     * 
+     * @param fila
+     * @return
+     */
     public static String estrellas(int fila) {
         String estrellas = "";
 
@@ -49,6 +55,13 @@ public class T08Ejercicio45MValleRell {
         return estrellas;
     }
 
+    /**
+     * funcion para imprimir los espacios del centro
+     * 
+     * @param fila
+     * @param altura
+     * @return
+     */
     public static String espacios(int fila, int altura) {
         String espacios = "";
 
@@ -59,6 +72,13 @@ public class T08Ejercicio45MValleRell {
         return espacios;
     }
 
+    /**
+     * funcion para imprimir la figura completa basada en las estrellas y los
+     * espacios
+     * 
+     * @param altura
+     * @return
+     */
     public static String valle(int altura) {
         String valle = "";
         for (int fila = 1; fila < altura; fila++) {
