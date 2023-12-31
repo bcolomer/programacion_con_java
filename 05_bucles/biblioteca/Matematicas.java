@@ -1,4 +1,3 @@
-package t05_bucles.biblioteca;
 /**
  * Crea una biblioteca de funciones matemáticas llamada Matematicas.java que
  * contenga las
@@ -16,285 +15,311 @@ package t05_bucles.biblioteca;
  */
 
 public class Matematicas {
+    /**
+     * funcion para saber si un numero es capicua
+     * 
+     * @param numero
+     * @return
+     */
+    public static boolean esCapicua(long numero) {
 
-  /**
-   * Comprueba si un número es o no capicúa
-   * 
-   * @param int numero
-   * @return boolean
-   */
-  public static boolean esCapicua(int numero) {
-    return numero == voltea(numero);
-  }
+        boolean esCapi = true;
+        long modulo = 0;
+        long invertido = 0;
+        long copiaNumero = numero;
 
-  /**
-   * Comprueba si un número es o no primo
-   * 
-   * @param int numero
-   * @return boolean
-   */
-  public static boolean esPrimo(int numero) {
+        do {
+            modulo = numero % 10;
+            numero = numero / 10;
+            invertido = (invertido * 10) + modulo;
 
-    int i = 2;
+        } while (numero > 0);
 
-    while ((i <= (numero / 2)) && (numero % i != 0)) {
-      i++;
+        if (invertido != copiaNumero) {
+            esCapi = false;
+        }
+
+        return esCapi;
     }
 
-    return (i > (numero / 2));
-  }
+    /**
+     * Comprueba si un número es o no primo
+     * 
+     * @param int numero
+     * @return boolean
+     */
+    public static boolean esPrimo(long numero) {
 
-  /**
-   * Devuelve el menor primo que es mayor al número que se pasa como parámetro.
-   * 
-   * @param numero
-   * @return
-   */
-  public static int siguientePrimo(int numero) {
+        boolean primo = true;
+        if (numero > 2) {
 
-    int i;
+            for (int i = 2; i < ((numero / 2) + 1); i++) {
+                if (numero % i == 0) {
+                    primo = false;
+                }
 
-    for (i = numero + 1; !esPrimo(i); i++)
-      ;
+            }
+        }
 
-    return i;
-  }
-
-  /**
-   * 
-   * @param int base
-   * @param int exponente
-   * @return float
-   */
-  public static float potencia(int base, int exponente) {
-
-    int potencia = 1;
-    int i;
-
-    for (i = 1; i <= exponente; i++) {
-      potencia *= base;
+        return (primo);
     }
 
-    return (exponente >= 0) ? potencia : 1f / potencia;
+    /**
+     * funcion que devuelve el siguiente primo al numero dado
+     * 
+     * @param numero
+     * @return
+     */
+    public static long siguientePrimo(long numero) {
+        long sigPrimo = numero;
+        boolean esSigPrimo = false;
+        do {
+            sigPrimo++;
+            esSigPrimo = esPrimo(sigPrimo);
 
-  }
+        } while (!esSigPrimo);
 
-  /**
-   * Cuenta el total de dígitos de un número dado
-   * 
-   * @param long numero
-   * @return int
-   */
-  public static int digitos(long numero) {
-
-    int contador = 0;
-    for (; numero > 0; numero /= 10) {
-      contador++;
+        return sigPrimo;
     }
 
-    return contador;
-  }
+    /**
+     * funcion que te da la potencia n de un numero dado
+     * 
+     * @param numero
+     * @param exponente
+     * @return
+     */
+    public static long potencia(long numero, int exponente) {
 
-  /**
-   * Invierte el número dado
-   * 
-   * @param long numero
-   * @return long
-   */
-  public static long voltea(long numero) {
+        long resultado = 1;
 
-    long invertido = 0;
-    int signo = (numero > 0) ? 1 : -1;
+        for (int i = 0; i < exponente; i++) {
+            resultado = resultado * numero;
+        }
 
-    // obtenemos el valor absoluto del número
-    numero = Math.abs(numero);
-
-    for (; numero > 0; numero /= 10) {
-      invertido = (invertido * 10) + (numero % 10);
+        return resultado;
     }
 
-    return invertido * signo;
-  }
+    /**
+     * funcion que te indica la cantidad de digitos de un numero
+     * 
+     * @param numero
+     * @return
+     */
+    public static int cuentaDigitos(long numero) {
+        int cantDigitos = 0;
 
-  /**
-   * Devuelve el dígito que está en la posición de un número entero.
-   * Se empieza contando por el 0 y de izquierda a derecha.
-   * 
-   * @param long numero
-   * @param int  posicion
-   * @return int
-   */
-  public static int digitoN(long numero, int posicion) {
-
-    // giramos el número
-    numero = voltea(numero);
-
-    // buscamos la posición
-    for (; posicion > 0; posicion--) {
-      numero /= 10;
-    }
-    return (int) numero % 10;
-
-  }
-
-  /**
-   * Devuelve la posición de la primera ocurrencia de un dígito dentro de un
-   * número
-   * entero. Si no se encuentra, devuelve -1.
-   * 
-   * @param long numero
-   * @param int  digito
-   * @return int
-   */
-  public static int posicionDeDigito(long numero, int digito) {
-
-    int posicion = 0;
-    boolean encontrado = false;
-
-    // volteamos el número
-    numero = voltea(numero);
-
-    // buscamos el dígito
-    while ((numero > 0) && (numero % 10 != digito)) {
-      posicion++;
-      numero /= 10;
+        do {
+            numero = numero / 10;
+            cantDigitos++;
+        } while (numero > 0);
+        return cantDigitos;
     }
 
-    return (numero > 0) ? posicion : -1;
-  }
+    /**
+     * funcion para darle la vuelta a un numero
+     * 
+     * @param numero
+     * @return
+     */
+    public static long voltea(long numero) {
+        long reves = 0;
+        long modulo = 0;
+        do {
+            modulo = numero % 10;
+            numero = numero / 10;
+            reves = (reves * 10) + modulo;
+        } while (numero > 0);
 
-  /**
-   * Le quita a un número n dígitos por detrás (por la derecha)
-   * 
-   * @param int  n
-   * @param long numero
-   * @return long
-   */
-  public static long quitaPorDetras(int n, long numero) {
-
-    for (; n > 0; n--) {
-      numero /= 10;
-    }
-    return numero;
-  }
-
-  /**
-   * Le quita a un número n dígitos por delante (por la izquierda)
-   * 
-   * @param int  n
-   * @param long numero
-   * @return long
-   */
-  public static long quitaPorDelante(int n, long numero) {
-
-    // calculamos la longitud del número
-    int digitosPrevistos = digitos(numero) - n;
-
-    // calculamos el resultado
-    long resultado = voltea(quitaPorDetras(n, voltea(numero)));
-
-    // calculamos el total de dígitos del resultado
-    int digitosResultado = digitos(resultado);
-
-    // si el total de digitos del resultado no es correcto multiplicamos por 10^n
-    if (digitosResultado < digitosPrevistos) {
-      resultado *= potencia(10, digitosPrevistos - digitosResultado);
+        return reves;
     }
 
-    return resultado;
-  }
+    /**
+     * funcion que te indica el numero que esta en una posicion
+     * 
+     * @param posicion
+     * @param numero
+     * @return
+     */
+    public static int digitoPosicion(int posicion, long numero) {
 
-  /**
-   * Añade un dígito a un número por detrás (por la derecha)
-   * 
-   * @param digito
-   * @param numero
-   * @return
-   */
-  public static long pegaPorDetras(int digito, long numero) {
-    return (numero * 10) + digito;
-  }
+        long volteado = voltea(numero);
+        long reves = 0;
+        long modulo = 0;
+        int contador = 0;
 
-  /**
-   * Añade un dígito a un número por detrás (por la izquierda)
-   * 
-   * @param digito
-   * @param numero
-   * @return
-   */
-  public static long pegaPorDelante(int digito, long numero) {
-    return voltea((voltea(numero) * 10) + digito);
-  }
+        do {
+            modulo = volteado % 10;
+            volteado = volteado / 10;
+            reves = (reves * 10) + modulo;
+            contador++;
 
-  /**
-   * Toma como parámetros las posiciones inicial y final dentro de
-   * un número y devuelve el trozo correspondiente.
-   * 
-   * @param long numero
-   * @param int  inicio
-   * @param int  fin
-   * @return long
-   */
-  public static long trozoDeNumero(long numero, int inicio, int fin) {
+        } while (contador - 1 != posicion);
+        return contador;
+    }
 
-    // obtenemos los digitos del numero
-    int totalDigitos = digitos(numero);
+    /**
+     * funcion que te devuelve la primera posicion de un numero
+     * 
+     * @param digito
+     * @param numero
+     * @return
+     */
+    public static int posicionDigito(int digito, long numero) {
 
-    // eliminamos inicio digitos por delante
-    numero = quitaPorDelante(inicio, numero);
+        long volteado = voltea(numero);
+        // long reves = 0;
+        long modulo = 0;
+        int contador = 0;
+        int posicionDigito = -1;
 
-    // eliminamos fin digitos por detrás
-    numero = quitaPorDetras(totalDigitos - fin - 1, numero);
+        do {
+            modulo = volteado % 10;
+            volteado = volteado / 10;
+            // reves = (reves * 10) + modulo;
+            contador++;
+            if (digito == modulo) {
+                posicionDigito = contador;
+            }
 
-    return numero;
-  }
+        } while ((digito != modulo) && (volteado > 0));
 
-  /**
-   * Pega dos números dados para formar uno.
-   * 
-   * @param int a
-   * @param int b
-   * @return long
-   */
-  public static long juntoNumeros(int a, int b) {
+        return posicionDigito;
+    }
 
-    int digitosB = digitos(b);
-    return (a * (int) potencia(10, digitosB)) + b;
-  }
+    /**
+     * funcion que quita n cantidad de digitos por detras de un numero
+     * 
+     * @param digitos
+     * @param numero
+     * @return
+     */
+    public static long quitaDetras(int digitos, long numero) {
+
+        int contador = 0;
+
+        do {
+            numero = numero / 10;
+            contador++;
+        } while (contador < digitos);
+
+        return numero;
+    }
+
+    /**
+     * funcion que quita n cantidad de digitos por delante
+     * 
+     * @param digitos
+     * @param numero
+     * @return
+     */
+    public static long quitaDelante(int digitos, long numero) {
+        long numeroReducido = 0;
+        long reves = 0;
+        long modulo = 0;
+        int contadorAntes = 0;
+        int contadorDespues = 0;
+        int contadorRecortar = 0;
+        int cantidadCeros = 0;
+
+        do {
+            modulo = numero % 10;
+            numero = numero / 10;
+            reves = (reves * 10) + modulo;
+            contadorAntes++;
+        } while (numero > 0);
+
+        do {
+            reves = reves / 10;
+            contadorRecortar++;
+        } while (contadorRecortar < digitos);
+
+        do {
+            modulo = reves % 10;
+            reves = reves / 10;
+            numero = (numero * 10) + modulo;
+            contadorDespues++;
+
+        } while (reves > 0);
+        if (contadorAntes > contadorDespues) {
+            cantidadCeros = contadorAntes - (contadorDespues + digitos);
+            numeroReducido = numero * ((long) (Math.pow(10, cantidadCeros)));
+        }
+
+        return numeroReducido;
+    }
+
+    /**
+     * funcion para agregar un digito por detras a un numero
+     * 
+     * @param digito
+     * @param numero
+     * @return
+     */
+    public static long pegaDetras(int digito, long numero) {
+        long numeroCompleto = 0;
+        numeroCompleto = (numero * 10) + digito;
+
+        return numeroCompleto;
+    }
+
+    /**
+     * funcion para agregar un digito por delante de un numero
+     * 
+     * @param digito
+     * @param numero
+     * @return
+     */
+    public static long pegaDelante(int digito, long numero) {
+
+        long numeroCompleto = 0;
+
+        numeroCompleto = voltea(numero);
+        numeroCompleto = (numeroCompleto * 10) + digito;
+        numeroCompleto = voltea(numeroCompleto);
+
+        return numeroCompleto;
+    }
+
+    /**
+     * funcion que devuelve un trozo de un numero dado la posicion inicial y final
+     * deseada
+     * 
+     * @param posicionInicial
+     * @param posicionFinal
+     * @param numero
+     * @return
+     */
+    public static long trozoNumero(int posicionInicial, int posicionFinal, long numero) {
+        long trozoNumero = 0;
+        int cantDigitosTotal = 0;
+        int cantDigitosDescontar = 0;
+
+        cantDigitosTotal = cuentaDigitos(numero);
+        cantDigitosDescontar = cantDigitosTotal - posicionFinal + 1;
+        trozoNumero = quitaDetras(cantDigitosDescontar, numero);
+        trozoNumero = quitaDelante(posicionInicial, trozoNumero);
+
+        return trozoNumero;
+
+    }
+
+    /**
+     * funcion para juntar dos numeros enteros en uno.
+     * 
+     * @param numeroA
+     * @param numeroB
+     * @return
+     */
+    public static long juntaNumeros(long numeroA, long numeroB) {
+        long numeroPegado = 0;
+        int cantidadDigitosB = 0;
+
+        cantidadDigitosB = cuentaDigitos(numeroB);
+        numeroA = numeroA * ((long) (Math.pow(10, cantidadDigitosB)));
+        numeroPegado = numeroA + numeroB;
+
+        return numeroPegado;
+    }
 
 }
-/*
- * public class Matematicas {
- * /*
- * public static boolean capicua(long num) {
- * return true;
- * }
- */
-/*
- * public static boolean capicua(long numero) {
- * long nummero;
- * long temporal;
- * long inverso = 0;
- * boolean capi;
- * // Scanner s = new Scanner(System.in);
- * 
- * // System.out.print("Introduce un número entero positivo: ");
- * // numero = s.nextLong();
- * 
- * temporal = numero;// numero;
- * 
- * // Invertimos el número
- * for (; temporal > 0; temporal /= 10) {
- * inverso = (inverso * 10) + (temporal % 10);
- * }
- * 
- * // Comprobamos si es capicúa
- * if (numero == inverso) {
- * capi = true;
- * } else {
- * capi = false;
- * }
- * return capi;
- * }
- * }
- */
