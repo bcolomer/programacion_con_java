@@ -1,3 +1,9 @@
+/*
+ * examen de temas 12345 
+ * 
+ * @autor Barbara Colomer
+ */
+
 import java.util.Scanner;
 
 public class T08Ejercicio001ReExamen12345 {
@@ -78,27 +84,6 @@ public class T08Ejercicio001ReExamen12345 {
                 for (int i = 0; i < numeroMayor; i++) {
                     if (i < modulo) {
                         pintarColor(modulo);
-                        /*
-                         * switch (modulo) {
-                         * case 1:
-                         * case 4:
-                         * case 3:
-                         * case 2:
-                         * System.out.print("\u2560 \033[41m \033[0m\033[32m ");
-                         * break;
-                         * case 5:
-                         * case 6:
-                         * System.out.print("\u2560 \033[42m \033[0m\033[32m ");
-                         * break;
-                         * case 7:
-                         * case 8:
-                         * System.out.print("\u2560 \033[44m \033[0m\033[32m ");
-                         * break;
-                         * case 9:
-                         * System.out.print("\u2560 \033[45m \033[0m\033[32m ");
-                         * break;
-                         * }
-                         */
                     } else {
                         System.out.print("\u2560   ");
                     }
@@ -279,27 +264,3 @@ public class T08Ejercicio001ReExamen12345 {
         }
     }
 }
-/*
- * public static void pintarColor(int modulo){
- * String imprimir = "";
- * switch (modulo) {
- * case 1:
- * case 4:
- * case 3:
- * case 2:
- * imprimir ="\u2560 \033[41m \033[0m\033[32m ";
- * break;
- * case 5:
- * case 6:
- * imprimir ="\u2560 \033[42m \033[0m\033[32m ";
- * break;
- * case 7:
- * case 8:
- * imprimir ="\u2560 \033[44m \033[0m\033[32m ";
- * break;
- * case 9:
- * imprimir ="\u2560 \033[45m \033[0m\033[32m ";
- * break;
- * }
- * }
- */

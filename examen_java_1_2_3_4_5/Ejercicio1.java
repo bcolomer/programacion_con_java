@@ -6,12 +6,12 @@ public class Ejercicio1 {
 
         Scanner s = new Scanner(System.in);
         long numero = 0;
-        char color;
+        // char color;
         long invertido = 0;
         long descomponer = 0;
         long modulo = 0;
-        int contador = 0;
-        int copiaContador = 0;
+        // int contador = 0;
+        // int copiaContador = 0;
 
         System.out.println("GRAPHIFY");
         System.out.println("============================");
@@ -25,13 +25,13 @@ public class Ejercicio1 {
             }
         } while (numero <= 0);
         System.out.println("Dibujo la gráfica en blanco y negro o en color (B/C)?");
-        color = s.next().charAt(0);
+        // color = s.next().charAt(0);
 
         s.close();
 
         invertido = Invertir(numero);
-        contador = ContadorDigitos(numero);
-        copiaContador = contador;
+        // contador = ContadorDigitos(numero);
+        // copiaContador = contador;
 
         do {
             modulo = invertido % 10;
@@ -61,7 +61,7 @@ public class Ejercicio1 {
 
             }
 
-            copiaContador--;
+            // copiaContador--;
             System.out.println();
             // }
 

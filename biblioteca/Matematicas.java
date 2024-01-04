@@ -1,4 +1,3 @@
-package biblioteca;
 
 /**
  * Crea una biblioteca de funciones matemáticas llamada Matematicas.java que

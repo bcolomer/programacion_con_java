@@ -11,12 +11,43 @@ correctamente los datos.
 import java.util.Scanner;
 
 public class T05Ejercicio45R42 {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    Scanner s = new Scanner(System.in);
-    int numero = Matematicas.System.out.println();
+        Scanner s = new Scanner(System.in);
+        long numero = 0;
+        int posicion = 0;
+        int nuevoNumero = 0;
+        long volteado = 0;
+        int diferenciadigitos = 0;
+        int modulo = 0;
+        long componer = 0;
+        int contador = 0;
 
-    s.close();
+        System.out.println("introduzca un numero");
+        numero = s.nextLong();
+        System.out.println("Introduzca la posicion del numero a reemplazar");
+        posicion = s.nextInt();
+        System.out.println("introduzca el numero por el cual debe ser reemplazado");
+        nuevoNumero = s.nextInt();
+        s.close();
 
-  }
+        volteado = Matematicas.voltea(numero);
+        diferenciadigitos = Matematicas.cuentaDigitos(numero) - Matematicas.cuentaDigitos(volteado);
+
+        do {
+            modulo = (int) (volteado % 10);
+            volteado = volteado / 10;
+            contador++;
+            if (contador == posicion) {
+                modulo = nuevoNumero;
+            }
+            componer = (componer * 10) + modulo;
+
+        } while (volteado > 0);
+        if (diferenciadigitos > 0) {
+            componer = componer * (Matematicas.potencia(10, diferenciadigitos));
+
+        }
+        System.out.println(componer);
+    }
 }
