@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * Crea una biblioteca de funciones matemáticas llamada Matematicas.java que
@@ -196,22 +197,32 @@ public class Matematicas {
         int contadorDespues = 0;
         int contadorRecortar = 0;
         int cantidadCeros = 0;
+        // le doy la vuelta para contar cantidad de digitos y se guarda el numero en
+        // reves
         do {
             modulo = numero % 10;
             numero = numero / 10;
             reves = (reves * 10) + modulo;
             contadorAntes++;
         } while (numero > 0);
+        // divido el numero formado en reves hasta que el contador llegue a la cantidad
+        // de digitos introducidos
+        // que sera la posicion donde queremos cortar
         do {
             reves = reves / 10;
             contadorRecortar++;
         } while (contadorRecortar < digitos);
+        // cuento la cantidad de digitos que tiene el numero despues de haberle dado la
+        // vuelta , volviendo a dar
+        // la vuelta
         do {
             modulo = reves % 10;
             reves = reves / 10;
             numero = (numero * 10) + modulo;
             contadorDespues++;
         } while (reves > 0);
+        // compruebo si tiene la misma cantidad de digitos antes o deespues para
+        // controlar si terminaba en ceros y en cuantos para poder agregarlos luego
         if (contadorAntes > contadorDespues) {
             cantidadCeros = contadorAntes - (contadorDespues + digitos);
             numeroReducido = numero * ((long) (Math.pow(10, cantidadCeros)));
@@ -282,4 +293,47 @@ public class Matematicas {
         numeroPegado = numeroA + numeroB;
         return numeroPegado;
     }
+
+    /**
+     * funcion para pedir un int numero entero positivo mayor a un numero dado
+     * 
+     * @param numero
+     * @param mayor
+     * @return
+     */
+    public static int pedirEnteroIntMayorA(Scanner s, int numero, int mayor) {
+        do {
+            while (!s.hasNextInt()) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+                s.next(); // Limpiar buffer
+            }
+            numero = s.nextInt();
+            if (numero < mayor) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+            }
+        } while (numero < mayor);
+        return numero;
+    }
+
+    /**
+     * funcion para pedir un long numero entero positivo mayor a un numero dado
+     * 
+     * @param numero
+     * @param mayor
+     * @return
+     */
+    public static long pedirEnteroLongMayorA(Scanner s, long numero, int mayor) {
+        do {
+            while (!s.hasNextLong()) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+                s.next(); // Limpiar buffer
+            }
+            numero = s.nextLong();
+            if (numero < mayor) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+            }
+        } while (numero < mayor);
+        return numero;
+    }
+
 }

@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * Crea una biblioteca de funciones matemáticas llamada Matematicas.java que
@@ -323,4 +324,45 @@ public class Matematicas {
         return numeroPegado;
     }
 
+    /**
+     * funcion para pedir un int numero entero positivo mayor a un numero dado
+     * 
+     * @param numero
+     * @param mayor
+     * @return
+     */
+    public static int pedirEnteroIntMayorA(Scanner s, int numero, int mayor) {
+        do {
+            while (!s.hasNextInt()) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+                s.next(); // Limpiar buffer
+            }
+            numero = s.nextInt();
+            if (numero < mayor) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+            }
+        } while (numero < mayor);
+        return numero;
+    }
+
+    /**
+     * funcion para pedir un long numero entero positivo mayor a un numero dado
+     * 
+     * @param numero
+     * @param mayor
+     * @return
+     */
+    public static long pedirEnteroLongMayorA(Scanner s, long numero, int mayor) {
+        do {
+            while (!s.hasNextLong()) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+                s.next(); // Limpiar buffer
+            }
+            numero = s.nextLong();
+            if (numero < mayor) {
+                System.out.println("Error. Introduzca un número entero mayor a " + mayor);
+            }
+        } while (numero < mayor);
+        return numero;
+    }
 }

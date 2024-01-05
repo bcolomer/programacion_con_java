@@ -14,7 +14,7 @@ public class T05Ejercicio38R35 {
     int altura = 0;
     int mitadA = 0;
     int estrellasA = 0;
-    int mitadB = 0;
+    int mitadB = 0;kjhkh
     int estrellasB = 0;
 
     Scanner s = new Scanner(System.in);
