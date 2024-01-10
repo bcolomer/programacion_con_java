@@ -51,8 +51,10 @@ public class T05Ejercicio63R59 {
 
                 }
                 if (diferencia <= fila) {
-                    for (int estrella = 0; estrella < 1; estrella++) {
+                    int estrella = 0;
+                    for (estrella = 0; estrella < estrella + 1; estrella++) {
                         System.out.print("a");
+                        // estrella++;
 
                     }
                 }
@@ -103,4 +105,3 @@ public class T05Ejercicio63R59 {
  * } else {
  * }
  */
-cxvzcv

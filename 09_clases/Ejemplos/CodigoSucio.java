@@ -11,11 +11,11 @@ public class CodigoSucio {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
-        int m;
-        char j;
-        String t;
-        int x;
-        int a;
+        int opcionMenu;
+        char primerCaracSimb;
+        String cadenaTeclado;
+        int numeroPos;
+        int numeroPosImpar;
 
         try {
 
@@ -24,32 +24,32 @@ public class CodigoSucio {
                 System.out.println("1. Opción 1");
                 System.out.println("2. Opción 2");
                 System.out.println("0. Salir");
-                m = s.nextInt();
+                opcionMenu = s.nextInt();
 
-                switch (m) {
+                switch (opcionMenu) {
                     case 1:
                         do {
                             System.out.print("Escribe un símbolo: ");
-                            t = System.console().readLine();
+                            cadenaTeclado = System.console().readLine();
 
                             System.out.print("Introduce un valor entero positivo:");
-                            x = s.nextInt();
+                            numeroPos = s.nextInt();
 
-                            if (x < 0) {
+                            if (numeroPos < 0) {
                                 System.out.println("El valor debe ser un número igual o mayor a cero.");
                             }
-                        } while (x < 0);
+                        } while (numeroPos < 0);
 
-                        f1(x, t.charAt(0));
-
+                        funcion1(numeroPos, cadenaTeclado);
+                        break;
                     case 2:
                         System.out.print("Escribe un símbolo: ");
-                        t = s.next();
+                        cadenaTeclado = s.next();
                         System.out.println("Introduce un valor positivo e impar:");
-                        j = t.charAt(0);
-                        a = s.nextInt();
-                        if (a > 0 && a % 2 != 0) {
-                            f2(a, j);
+                        primerCaracSimb = cadenaTeclado.charAt(0);
+                        numeroPosImpar = s.nextInt();
+                        if (numeroPosImpar > 0 && numeroPosImpar % 2 != 0) {
+                            funcion2(numeroPosImpar, primerCaracSimb);
                         } else {
                             System.out.println("El valor debe ser positivo e impar.");
                         }
@@ -62,7 +62,7 @@ public class CodigoSucio {
                         System.out.println("Opción no válida");
                 }
 
-            } while (m != 0);
+            } while (opcionMenu != 0);
         } catch (Exception e) {
             System.out.println("**Se ha producido un error en la inserción de datos.");
         } finally {
@@ -70,12 +70,16 @@ public class CodigoSucio {
         }
     }
 
-    private static void f1(int r, String x) {
-        for (int i = -r; i <= r; i++) {
-            for (int j = r; j <= r; j++) {
-                if (i * i + j * j <= r * r && i * i + j * j > (r - 2) * (r - 1)) {
-                    System.out.printf("%s ", x);
-                } else {
+    public static void funcion1(int numero, String caracter) {
+        for (int fila = -numero; fila <= numero; fila++) {// imprime el doble de lineas +1 que el numero dado
+            // System.out.print("fila" + fila);
+            for (int columna = numero; columna <= numero; columna++) {
+                // System.out.print("columna"+columna);
+                if (fila * fila + columna * columna <= numero * numero
+                        && fila * fila + columna * columna > (numero - 2) * (numero - 1)) {
+
+                    System.out.printf("%s ", caracter);
+                } else {// nunca entra aca?
                     System.out.print("  ");
                 }
             }
@@ -83,28 +87,29 @@ public class CodigoSucio {
         }
     }
 
-    private static void f2(float a, char w) {
-        int e = (int) (a / 2);
-        for (int i = 0; i < a; i++) {
-            for (int j = 0; j < a; j++) {
-                if (i < a / 2) {
-                    if (j == e || j == a - e - 1) {
-                        System.out.print(w);
+    public static void funcion2(int numPositImpar, char simbolo) {
+
+        int mitadNumero = (int) (numPositImpar / 2);
+        for (int fila = 0; fila < numPositImpar; fila++) {
+            for (int j = 0; j < numPositImpar; j++) {
+                if (fila < numPositImpar / 2) {
+                    if (j == mitadNumero || j == numPositImpar - mitadNumero - 1) {
+                        System.out.print(simbolo);
                     } else {
                         System.out.print(" ");
                     }
                 } else {
-                    if (j == e || j == a - e - 1) {
-                        System.out.print(w);
+                    if (j == mitadNumero || j == numPositImpar - mitadNumero - 1) {
+                        System.out.print(simbolo);
                     } else {
                         System.out.print(" ");
                     }
                 }
             }
-            if (i < a / 2) {
-                e--;
+            if (fila < numPositImpar / 2) {
+                mitadNumero--;
             } else {
-                e++;
+                mitadNumero++;
             }
             System.out.println();
         }
