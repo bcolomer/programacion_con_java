@@ -5,15 +5,20 @@ public class EjemploDados {
 
         System.out.print("\nTirada de tres dados: ");
 
-        for (int i = 1; i <= 3; i++) {
+        for (int contador = 1; contador <= 3; contador++) {
             dado = randomNumber();
             System.out.print(dado + " ");
-            suma = suma + dado;
+            suma += dado;
         }
         System.out.println();
         System.out.println("suma: " + suma);
     }
 
+    /**
+     * devuelve numero aleatorio entre 1 y 6
+     * 
+     * @return
+     */
     public static int randomNumber() {
         return (int) (Math.random() * 6 + 1);
         // return (int) (Math.random() * 60 + 50);porque esto no funciona con numeros
