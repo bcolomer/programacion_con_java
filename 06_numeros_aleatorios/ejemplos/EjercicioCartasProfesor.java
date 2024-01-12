@@ -1,4 +1,4 @@
-public class EjercicioCartas {
+public class EjercicioCartasProfesor {
     private static final int FIGURA_AS = 1;
     private static final int FIGURA_1 = 11; // J
     private static final int FIGURA_2 = 12; // Q
@@ -7,6 +7,9 @@ public class EjercicioCartas {
     public static void main(String[] args) {
         escribirNumeroCarta((int) (Math.random() * 13) + 1);
         escribirPaloCarta((int) (Math.random() * 4) + 1);
+        long capi = (long) (Math.random() * 10 + 10);
+        System.out.println(esCapicua(capi));
+        System.out.println(capi);
     }
 
     /**
@@ -49,5 +52,21 @@ public class EjercicioCartas {
                 System.out.println(" de treboles");
                 break;
         }
+    }
+
+    public static boolean esCapicua(long numero) {
+        boolean esCapi = true;
+        long modulo = 0;
+        long invertido = 0;
+        long copiaNumero = numero;
+        do {
+            modulo = numero % 10;
+            numero = numero / 10;
+            invertido = (invertido * 10) + modulo;
+        } while (numero > 0);
+        if (invertido != copiaNumero) {
+            esCapi = false;
+        }
+        return esCapi;
     }
 }

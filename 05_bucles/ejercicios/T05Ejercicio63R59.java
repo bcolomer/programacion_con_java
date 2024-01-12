@@ -49,7 +49,7 @@ public class T05Ejercicio63R59 {
 
                     System.out.print("-");
 
-                }
+                }hjgjhgj
                 if (diferencia <= fila) {
                     int estrella = 0;
                     for (estrella = 0; estrella < estrella + 1; estrella++) {
