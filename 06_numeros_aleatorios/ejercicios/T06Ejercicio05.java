@@ -25,9 +25,7 @@ de esos números.
         System.out.printf(
                 "\nEl numero maximo es %d. \nEl minimo es %d. \nLa media de todos los numeros mostrados es %.2f",
                 maximo, minimo, media);
-        System.out.println();
-        System.out.println(suma);
-        System.out.println(contador);
+
     }
 
 }
