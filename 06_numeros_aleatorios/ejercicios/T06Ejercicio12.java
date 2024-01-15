@@ -15,31 +15,8 @@ public class T06Ejercicio12 {
             // System.out.println(numero);
 
             simbolo = (char) numero;
-            System.out.print(simbolo);
+            System.out.printf("\033[32m%c", simbolo);
         }
-        // System.out.println("corte");
-        // numero = (int) (Math.random() * 126 + 32);
-        // System.out.println(numero);
-        // }
-        // for (int i = 0; i < 30; i++) {
-        // // solucion del libro:
-        // numero = (int) (Math.random() * 11 + 3); // desde el 3 hasta el 14-1
-        // System.out.print(numero + " ");
 
-        // }
-
-        // System.out.println("corte");
-        // for (int i = 0; i < 20; i++) {
-
-        // numero = (int) (Math.random() * (126 - 32 + 1) + 32);
-        // System.out.println(numero);
-        // }
-        // System.out.println("corte");
-
-        // for (int i = 0; i < 20; i++) {
-
-        // numero = (int) (Math.random() * 93 + 32);
-        // System.out.println(numero);
-        // }
     }
 }

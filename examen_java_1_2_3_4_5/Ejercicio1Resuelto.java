@@ -33,7 +33,7 @@ public class Ejercicio1Resuelto {
                 System.out.println("ERROR: el número tiene que ser mayor que cero.");
             } else {
                 System.out.println("Dibujo la gráfica en blanco y negro o en color (B|C)?");
-                grafica = s.next();
+                grafica = System.console().readLine();
 
             }
         }
@@ -104,7 +104,6 @@ public class Ejercicio1Resuelto {
 
                 }
             }
-
             lineaInferiorColor(numeroMayor);
         } else {
             System.out.println("Has introducido caracter incorrecto, las opciones válidas son \"B\" o \"C\".");
