@@ -11,8 +11,8 @@ public class T06Ejercicio12 {
         char simbolo = ' ';
         for (int i = 0; i < 10000; i++) {
 
-            numero = (int) (Math.random() * (126 - 32 + 1) + 32);
-            // System.out.println(numero);
+            numero = (int) (Math.random() * 95 + 32);
+            // (Math.random() * 126 - 32 + 1+ 32)
 
             simbolo = (char) numero;
             System.out.printf("\033[32m%c", simbolo);
