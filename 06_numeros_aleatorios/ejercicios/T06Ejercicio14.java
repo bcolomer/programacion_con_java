@@ -18,8 +18,8 @@ public class T06Ejercicio14 {
         int contador = 5;
         Scanner s = new Scanner(System.in);
         // el numero tiene que ser desde A hasta B = de 0 a 10
-        int numeroB = 11; // esto es la cantidad de numeros a tratar de adivinar
-        int numeroA = 0; // esto es desde que numero hay que tratar de adivinar
+        int numeroFinal = 11; // esto es la cantidad de numeros a tratar de adivinar
+        int numeroInicial = 0; // esto es desde que numero hay que tratar de adivinar
         String mayorMenor = "";
 
         try {
@@ -33,8 +33,8 @@ public class T06Ejercicio14 {
         }
 
         do {
-            // numeroIntentado = (int) (Math.random() * numeroB + numeroA);
-            numeroIntentado = (int) (Math.random() * (numeroB - numeroA) + numeroA);
+            // numeroIntentado = (int) (Math.random() * numeroFinal + numeroInicial);
+            numeroIntentado = (int) (Math.random() * (numeroFinal - numeroInicial) + numeroInicial);
 
             if (numeroAdivinar == numeroIntentado) {
                 System.out.println("Creo que estas pensando el numero:" + numeroIntentado);
@@ -49,12 +49,15 @@ public class T06Ejercicio14 {
 
                 if (mayorMenor.equals("mayor")) {
 
-                    numeroA = numeroIntentado + 1;
-                    // numeroB = numeroB - numeroIntentado - 1;
-
+                    numeroInicial = numeroIntentado + 1;
+                    // numeroFinal = numeroFinal - numeroIntentado - 1;
+                    // deberia ser mi opcion inicial = intentado +1? PROBAR ESTO
                 } else if (mayorMenor.equals("menor")) {
-                    numeroB = numeroIntentado;
-                    // numeroB = numeroIntentado + 1;
+                    numeroFinal = numeroIntentado;
+                    // numeroFinal = numeroIntentado - 1;//esto antes lo habia puesto +1 y ahi
+                    // estaba
+                    // equivoada porque el inicial es el +1
+
                 } else {
                     System.out.println("no ha introducido una opcion correcta");
                 }
@@ -62,7 +65,10 @@ public class T06Ejercicio14 {
                     System.out.println("gane ");
                 }
             }
-        } while ((contador > 0) && (numeroAdivinar != numeroIntentado));
+        } while ((contador > 0) && (numeroAdivinar != numeroIntentado));// porque un y y no un or.. cuando quiero
+        // que siga mientras una o la otra sea corecta.. esto es porque sigue mientras
+        // tenga intentos
+        // y el numero sea diferente
         if (contador == 0) {
             System.out.println("Se agotaron los intentos. No he conseguido adivinar tu número.");
             System.out.println("Esta vez has ganado tu.");

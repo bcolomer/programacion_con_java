@@ -11,12 +11,15 @@ rectángulo.
  */
 
 import java.util.Scanner;
-dfasdfa
+
 public class T06Ejercicio17 {
     public static void main(String[] args) {
 
         int alto = 0;
         int ancho = 0;
+        int fila = 0;
+        int alturapez = 0;
+        int anchopez = 0;
         Scanner s = new Scanner(System.in);
 
         System.out.println("Introduzca la altura para la pecera, el minimo es 4");
@@ -24,19 +27,31 @@ public class T06Ejercicio17 {
         System.out.println("Introduzca el ancho para la pecera, el minimo es 4");
         ancho = s.nextInt();
         s.close();
+        alturapez = (int) (Math.random() * (alto - 2) + 1); // esto da un aleatorio entre 1 y la altura-1
+        anchopez = (int) (Math.random() * (ancho - 2) + 1);
 
-        for (int fila = 0; fila < alto; fila++) {
+        System.out.println(alturapez);
+        System.out.println(anchopez);
+
+        for (fila = 0; fila < alto; fila++) {
             if ((fila == 0) || (fila == alto - 1)) {
                 for (int filaSupInf = 0; filaSupInf < ancho; filaSupInf++) {
                     System.out.print("*");
                 }
-            } else {
 
+            } else {
+                System.out.print("*");
+                for (int espaciosinternos = 1; espaciosinternos <= ancho - 2; espaciosinternos++) {
+                    if ((fila == alturapez) && (espaciosinternos == anchopez)) {
+                        System.out.print("&");
+                    } else {
+                        System.out.print(" ");
+                    }
+
+                }
+                System.out.print("*");
             }
 
-            // for (int filaInferior = 0; filaInferior < ancho; filaInferior++) {
-            // System.out.print("*");
-            // }
             System.out.println();
         }
     }

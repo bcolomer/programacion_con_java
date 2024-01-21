@@ -13,9 +13,7 @@ d) La última nota de la melodía debe coincidir con la primera.
  */
 public class T06Ejercicio15 {
     public static void main(String[] args) {
-        int compas = 0;
         int nota = 0;
-        String notaLetras = "";
         int melodia = 0;
         int notafinal = 0;
 

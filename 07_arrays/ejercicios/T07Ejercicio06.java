@@ -16,7 +16,7 @@ public class T07Ejercicio06 {
         int aux = 0;
 
         Scanner s = new Scanner(System.in);
-        numeros = new int[5];
+        numeros = new int[15];
 
         System.out.println("introduzca 15 numeros");
         for (int i = 0; i < numeros.length; i++) {
@@ -27,9 +27,6 @@ public class T07Ejercicio06 {
         for (int i = 0; i < numeros.length - 1; i++) {
 
             numeros[i] = numeros[i + 1];
-            // if (i >= numeros.length) {
-            // numeros[numeros.length] = aux;
-            // }
         }
         numeros[numeros.length - 1] = aux;
         System.out.println("los nuevos numeros del array son");
