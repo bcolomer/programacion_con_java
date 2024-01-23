@@ -10,8 +10,8 @@ necesario.
 
 public class T07Ejercicio10 {
     public static void main(String[] args) {
-        int numeros[];
-        int arrayAux[];
+        int[] numeros;
+        int[] arrayAux;
         int aleatorio = 0;
         int contpar = 0;
         int auxiliarPar = 0;

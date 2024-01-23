@@ -11,9 +11,9 @@ columnas.
 
 public class T07Ejercicio04 {
     public static void main(String[] args) {
-        int numero[];
-        int cuadrado[];
-        int cubo[];
+        int[] numero;
+        int[] cuadrado;
+        int[] cubo;
 
         numero = new int[20];
         cuadrado = new int[20];

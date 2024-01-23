@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class T07ejercicio08 {
     public static void main(String[] args) {
 
-        int temperaturas[];
+        int[] temperaturas;
 
         Scanner s = new Scanner(System.in);
 

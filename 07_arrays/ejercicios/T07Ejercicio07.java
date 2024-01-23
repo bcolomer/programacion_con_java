@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class T07Ejercicio07 {
     public static void main(String[] args) {
-        int numeros[];
+        int[] numeros;
         int aleatorio = 0;
         int valor1 = 0;
         int valor2 = 0;

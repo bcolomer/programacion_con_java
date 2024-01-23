@@ -5,19 +5,39 @@ public class T07Ejercicio000 {
 
         int[] numeros;
         Scanner s = new Scanner(System.in);
+        String opcion;
 
-        numeros = new int[10];
+        numeros = new int[3];
 
         System.out.println("Introduzca 10 numeros enteros, separados por enter");
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = s.nextInt();
         }
+
+        System.out.println("deseas ver el array al derecho o al reves?");
+
+        opcion = System.console().readLine();
+        if (opcion.equals("al derecho")) {
+            System.out.println("el array al derecho  es: ");
+            mostrarArrayDerecho(numeros);
+        } else if (opcion.equals("al reves")) {
+            System.out.println("el array invertido es: ");
+            mostrarArrayInvertido(numeros);
+        }
         s.close();
-        System.out.println("Los numeros introducidos al reves, son los siguientes: ");
+    }
 
-        for (int i = 9; i >= 0; i--) {
+    public static void mostrarArrayDerecho(int[] numeros) {
+
+        for (int i = 0; i < numeros.length; i++) {
             System.out.print(numeros[i] + " ");
+        }
+    }
 
+    public static void mostrarArrayInvertido(int[] numeros) {
+
+        for (int i = numeros.length - 1; i >= 0; i--) {
+            System.out.print(numeros[i] + " ");
         }
     }
 }

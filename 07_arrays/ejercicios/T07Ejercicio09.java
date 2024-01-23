@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class T07Ejercicio09 {
     public static void main(String[] args) {
 
-        int numeros[];
+        int[] numeros;
         Scanner s = new Scanner(System.in);
 
         numeros = new int[8];
