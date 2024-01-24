@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class T072Ejercicio00 {
     public static void main(String[] args) {
-        // int matriz[][];
-        // matriz = new int[3][3];
+        int matriz[][];
+        matriz = new int[3][3];
         // matriz=[[8,-12,33], [14,1,-24], [100,51,69]];
-        // matriz={{8,-12,33}, {14,1,-24}, {100,51,69}};
+        matriz={{8,-12,33},{14,1,-24},{100,51,69}};
         Scanner s = new Scanner(System.in);
 
         /*

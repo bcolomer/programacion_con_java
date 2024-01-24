@@ -14,18 +14,19 @@ public class T072Ejercicios000 {
 
         Scanner s = new Scanner(System.in);
         System.out.println("introduzca el contenido de las celdas, separado con intro");
-        for (int i = 0; i < numeros.length; i++) {
-            for (int j = 0; j < numeros[i].length; j++) {
-                numeros[i][j] = s.nextInt();
+        for (int filas = 0; filas < numeros.length; filas++) {
+            for (int columnas = 0; columnas < numeros[filas].length; columnas++) {
+                numeros[filas][columnas] = s.nextInt();
             }
 
         }
-        for (int i = 0; i < numeros.length; i++) {
-            for (int j = 0; j < numeros[i].length; j++) {
-                System.out.print(numeros[i][j] + "-");
+        for (int filas = 0; filas < numeros.length; filas++) {
+            for (int columnas = 0; columnas < numeros[filas].length; columnas++) {
+                System.out.print(numeros[filas][columnas] + "-");
             }
             System.out.println();
         }
         s.close();
+
     }
 }
