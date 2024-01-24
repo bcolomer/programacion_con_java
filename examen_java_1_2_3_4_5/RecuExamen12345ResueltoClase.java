@@ -1,10 +1,6 @@
 public class RecuExamen12345ResueltoClase {
     public static void main(String[] args) {
-        int opcion=0;
-
-        do {
-            imprimirMenu();
-        } while (opcion!SALIR);
+        int opcion = 0;
 
     }
 

@@ -42,6 +42,7 @@ public class T07Ejercicio11 {
         // imprimo el array de valores ordenados con los primos delante:
         System.out.println("El array ordenado:");
         imprimirIndice(numeros.length);
+        System.out.println();
         imprimirArray(ordenarArrayPrimos(numeros, numeros.length, contador));
 
     }
@@ -54,7 +55,7 @@ public class T07Ejercicio11 {
     public static void imprimirIndice(int numero) {
         System.out.printf("Indice:   ");
         for (int j = 0; j < numero; j++) {
-            System.out.print(j + "  ");
+            System.out.print("  " + j + "   ");
         }
     }
 
@@ -90,9 +91,15 @@ public class T07Ejercicio11 {
      * @param array
      */
     public static void imprimirArray(int array[]) {
-        System.out.printf("VALOR:    ");
+        System.out.printf("VALOR:    |");
         for (int j = 0; j < array.length; j++) {
-            System.out.print(array[j] + "  ");
+            for (int i = 0; i < 4; i++) {
+                System.out.print(" ");
+                if (i == 1) {
+                    System.out.print(array[j] + " |");
+                }
+            }
+
         }
     }
 
