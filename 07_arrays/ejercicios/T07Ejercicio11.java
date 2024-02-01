@@ -11,6 +11,7 @@ array resultante.
  */
 import java.util.Scanner;
 
+//TODO la tabla no se como hacerla
 public class T07Ejercicio11 {
     public static void main(String[] args) {
 

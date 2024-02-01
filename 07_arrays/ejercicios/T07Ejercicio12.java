@@ -11,6 +11,7 @@ Por ejemplo, para inicial = 3 y final = 7:
  * 
  * @autor Barbara Colomer
  */
+//TODO problemas con la tabla
 public class T07Ejercicio12 {
     public static final int MAXIMO = 9;
 

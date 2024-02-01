@@ -7,7 +7,7 @@ necesario.
  * 
  * @autor Barbara Colomer
  */
-
+//TODO  falta cuadricula
 public class T07Ejercicio10 {
     public static void main(String[] args) {
         int[] numeros;
