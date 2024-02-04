@@ -97,4 +97,36 @@ public class StringUtilsTest {
         Assert.assertEquals(expectedWord, actualWord);
 
     }
+
+    @Test
+    public void testisPalindromewithPalindrome() {
+
+        // given
+        String word = "reconocer";
+        boolean expectedWord = true;
+        StringUtils stringUtils = new StringUtils();
+
+        // when
+        boolean actualWord = stringUtils.reverseWord(word);
+
+        // then
+        Assert.assertEquals(expectedWord, actualWord);
+
+    }
+
+    @Test
+    public void testisPalindromewithNonAPalindrome() {
+
+        // given
+        String word = "reconocera";
+        boolean expectedWord = true;
+        StringUtils stringUtils = new StringUtils();
+
+        // when
+        boolean actualWord = stringUtils.reverseWord(word);
+
+        // then
+        Assert.assertEquals(expectedWord, actualWord);
+
+    }
 }

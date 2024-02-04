@@ -11,9 +11,10 @@ public class StringUtils {
 
     public boolean reverseWord(String word) {
         String reversed = reverse(word);
-        if (reversed == word) {
+        if (reversed.equals(word)) {
             return true;
         }
         return false;
     }
+
 }

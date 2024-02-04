@@ -11,7 +11,7 @@ import java.util.Scanner;
 //FIXME corregir las funciones con el nuevo array constante
 //TODO modifcar la grafica para que se vea mas bonita
 
-public class T07ejercicio08 {
+public class T07Ejercicio08 {
     public static final int size = 12;
     public static final String[] NOMBRE_MESES = { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
             "agosto", "septiembre", "octubre", "noviembre", "diciembre" };

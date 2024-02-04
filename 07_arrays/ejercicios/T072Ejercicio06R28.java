@@ -44,15 +44,23 @@ public class T072Ejercicio06R28 {
     public static void rellenarArrayDiferente(int[][] numeros) {
         int[] arrayAux;
         int contador = 0;
+        int aleatorio = 0;
         arrayAux = new int[contarPosicionesArray(numeros)];
 
         for (int i = 0; i < numeros.length; i++) {
             for (int j = 0; j < numeros[i].length; j++) {
-                numeros[i][j] = (int) (Math.random() * (MAXIMO + 1));
-                arrayAux[contador] = numeros[i][j];
-                if (numeroExiste(arrayAux, numeros[i][j])) {
-                    numeros[i][j] = (int) (Math.random() * (MAXIMO + 1));
+                aleatorio = (int) (Math.random() * (MAXIMO + 1));
+                arrayAux[contador] = aleatorio;
+                for (int valor : arrayAux) {
+                    if (aleatorio == valor) {
+
+                    }
                 }
+                // numeros[i][j] = (int) (Math.random() * (MAXIMO + 1));
+                // arrayAux[contador] = numeros[i][j];
+                // if (numeroExiste(arrayAux, numeros[i][j])) {
+                // numeros[i][j] = (int) (Math.random() * (MAXIMO + 1));
+                // }
                 contador++;
             }
         }
