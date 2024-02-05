@@ -9,7 +9,7 @@ public class T072Ejercicio06R28 {
     // establece el limite maximo para los aleatorios del array
     public static final int MAXIMO = 70;
 
-    // FIXME corregir el tema de que no repita numeros
+    // FIXME corregir que no repita numeros
     public static void main(String[] args) {
 
         int[][] numeros;

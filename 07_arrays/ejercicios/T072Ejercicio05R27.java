@@ -19,7 +19,7 @@ public class T072Ejercicio05R27 {
         rellenarArray(numeros);
         mostrarArray(numeros);
         System.out.println();
-        // mostrarArrayModificado(numeros);
+        mostrarArrayModificado(numeros);
         System.out.println();
         System.out.println(mostrarMinimo(numeros));
         System.out.println(mostrarMaximo(numeros));
