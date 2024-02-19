@@ -1,5 +1,7 @@
 package FraccionEjercicio4;
 
+import Ejercicios.FraccionEjercicio4.Fraccion;
+
 public class AppFraccion {
     public static void main(String[] args) {
 

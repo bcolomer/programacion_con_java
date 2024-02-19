@@ -50,9 +50,6 @@ public class Pizza {
     // SETTERS ///
 
     // METODOS ///
-    public void cocinar() {
-        System.out.println("La pizza esta en el horno");
-    }
 
     public void sirve() {
         if (this.estadoPizza.equals(EstadoPizza.PEDIDA)) {

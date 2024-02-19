@@ -1,4 +1,4 @@
-package Ejercicios.Vehiculo;
+package Ejercicio02Vehiculo;
 
 public class Vehiculo {
 

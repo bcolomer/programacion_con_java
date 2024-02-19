@@ -1,4 +1,4 @@
-package Ejercicios.Vehiculo;
+package Ejercicio02Vehiculo;
 
 public class AppVehiculo {
     public static void main(String[] args) {

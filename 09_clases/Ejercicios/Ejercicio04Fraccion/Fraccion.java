@@ -1,4 +1,4 @@
-package Ejercicios.FraccionEjercicio4;
+package Ejercicio04Fraccion;
 
 public class Fraccion {
     // ATRIBUTOS /////

@@ -30,9 +30,6 @@ public class Caballo {
         return raza;
     }
 
-    public Caballo() {
-    }
-
     public String getColorPelaje() {
         return colorPelaje;
     }
