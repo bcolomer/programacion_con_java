@@ -9,7 +9,6 @@ no se puedan vender más entradas de la cuenta.
  * 
  * @autor Barbara Colomer
  */
-
 package Ejercicio07ExpoCoches;
 
 public class AppExpoCoche {
@@ -22,8 +21,9 @@ public class AppExpoCoche {
         Zona compraVenta = new Zona(200);
         Zona vip = new Zona(25);
 
-        menu();
         do {
+            menu();
+
             opcionMenu = Integer.parseInt(System.console().readLine());
             switch (opcionMenu) {
                 case 1:
@@ -31,40 +31,43 @@ public class AppExpoCoche {
                             + vip.getEntradasPorVender());
                     break;
                 case 2:
-                    menuZonas();
                     System.out.println("Para que zona desea las entradas?");
-                    do {
-                        opcionZonas = Integer.parseInt(System.console().readLine());
-                        switch (opcionZonas) {
-                            case 1:
-                                System.out.println("Cuantas entradas quiere?");
-                                cantidad = Integer.parseInt(System.console().readLine());
-                                principal.vender(cantidad);
-                                break;
-                            case 2:
-                                System.out.println("Cuantas entradas quiere?");
-                                cantidad = Integer.parseInt(System.console().readLine());
-                                compraVenta.vender(cantidad);
-                                break;
-                            case 3:
-                                System.out.println("Cuantas entradas quiere?");
-                                cantidad = Integer.parseInt(System.console().readLine());
-                                vip.vender(cantidad);
-                                break;
-                            default:
-                                System.out.println("Error, no es una opcion valida.");
-                                break;
-                        }
 
-                    } while (opcionZonas < 3);
+                    menuZonas();
 
+                    opcionZonas = Integer.parseInt(System.console().readLine());
+                    switch (opcionZonas) {
+                        case 1:
+                            System.out.println("Cuantas entradas quiere?");
+                            cantidad = Integer.parseInt(System.console().readLine());
+                            principal.vender(cantidad);
+                            break;
+                        case 2:
+                            System.out.println("Cuantas entradas quiere?");
+                            cantidad = Integer.parseInt(System.console().readLine());
+                            compraVenta.vender(cantidad);
+                            break;
+                        case 3:
+                            System.out.println("Cuantas entradas quiere?");
+                            cantidad = Integer.parseInt(System.console().readLine());
+                            vip.vender(cantidad);
+                            break;
+                        case 4:
+                            break;
+                        default:
+                            System.out.println("Error, no es una opcion valida.");
+                            break;
+                    }
+
+                    break;
+                case 3:
+                    System.out.println("Gracias por haber entrado en nuestra app");
                     break;
                 default:
                     System.out.println("Error, no es una opcion valida");
                     break;
 
             }
-            menu();
 
         } while (opcionMenu != 3);
 
@@ -87,5 +90,6 @@ public class AppExpoCoche {
         System.out.println("1. Sala Principal");
         System.out.println("2. CompraVenta");
         System.out.println("3. V.I.P. ");
+        System.out.println("4. Atrás.");
     }
 }
