@@ -7,7 +7,7 @@ que hay en esa diagonal.
  * 
  * @autor Barbara Colomer
  */
-public class T07EjercicioR33 {
+public class T07EjercicioR33yR34 {
     public static final int MAX = 10;
     public static final int INI = 200;
     public static final int FIN = 300;
@@ -15,17 +15,27 @@ public class T07EjercicioR33 {
     public static void main(String[] args) {
         int[][] tablero;
         tablero = new int[MAX][MAX];
-        int[] diagonal;
-        diagonal = new int[MAX];
+        int[] diagonalIzquierdo;
+        diagonalIzquierdo = new int[MAX];
+        int[] diagonalDerecho;
+        diagonalDerecho = new int[MAX];
 
         rellenarArray(tablero);
         mostrarArrayBi(tablero);
-        generoArray(diagonal, tablero);
+        generoArrayDiagonalIzquierdo(diagonalIzquierdo, tablero);
+        generoArrayDiagonalDerecho(diagonalDerecho, tablero);
+        System.out.println("Diagonal derecho:");
+        mostrarArray(diagonalDerecho);
+        numMaximo(diagonalDerecho);
+        numMinimo(diagonalDerecho);
+        media(diagonalDerecho);
         System.out.println();
-        mostrarArray(diagonal);
-        numMaximo(diagonal);
-        numMinimo(diagonal);
-        media(diagonal);
+        System.out.println("Diagonal izquierdo");
+        mostrarArray(diagonalIzquierdo);
+        numMaximo(diagonalIzquierdo);
+        numMinimo(diagonalIzquierdo);
+        media(diagonalIzquierdo);
+
     }
 
     /**
@@ -33,9 +43,9 @@ public class T07EjercicioR33 {
      * 
      * @param diagonal
      */
-    public static void media(int[] diagonal) {
+    public static void media(int[] array) {
         double suma = 0;
-        for (int item : diagonal) {
+        for (int item : array) {
             suma = suma + item;
         }
         System.out.printf("Media: %.2f", (suma / MAX));
@@ -46,11 +56,11 @@ public class T07EjercicioR33 {
      * 
      * @param diagonal
      */
-    public static void numMinimo(int[] diagonal) {
+    public static void numMinimo(int[] array) {
         int min = Integer.MAX_VALUE;
         System.out.print("Mínimo: ");
 
-        for (int item : diagonal) {
+        for (int item : array) {
             if (min > item) {
                 min = item;
             }
@@ -63,11 +73,11 @@ public class T07EjercicioR33 {
      * 
      * @param diagonal
      */
-    public static void numMaximo(int[] diagonal) {
+    public static void numMaximo(int[] array) {
         int max = Integer.MIN_VALUE;
         System.out.print("\nMáximo: ");
 
-        for (int item : diagonal) {
+        for (int item : array) {
             if (max < item) {
                 max = item;
             }
@@ -80,9 +90,8 @@ public class T07EjercicioR33 {
      * 
      * @param diagonal
      */
-    public static void mostrarArray(int[] diagonal) {
-        System.out.println("Diagonal desde la esquina superior izquierda a la esquina inferior derecha:");
-        for (int item : diagonal) {
+    public static void mostrarArray(int[] array) {
+        for (int item : array) {
             System.out.print(item + " ");
         }
     }
@@ -93,10 +102,27 @@ public class T07EjercicioR33 {
      * @param diagonal
      * @param tablero
      */
-    public static void generoArray(int[] diagonal, int[][] tablero) {
+    public static void generoArrayDiagonalIzquierdo(int[] arrayDiagonal, int[][] tablero) {
 
-        for (int i = 0; i < diagonal.length; i++) {
-            diagonal[i] = tablero[i][i];
+        for (int i = 0; i < arrayDiagonal.length; i++) {
+            arrayDiagonal[i] = tablero[i][i];
+        }
+    }
+
+    /**
+     * completo el array con los valores de la diagonal empezando por la derecha
+     * esta vez
+     * 
+     * @param diagonal
+     * @param tablero
+     */
+    public static void generoArrayDiagonalDerecho(int[] arrayDiagonal, int[][] tablero) {
+        int posicion = arrayDiagonal.length - 1;
+
+        for (int i = 0; i < arrayDiagonal.length; i++) {
+            arrayDiagonal[posicion] = tablero[posicion][i];
+            posicion--;
+
         }
     }
 
